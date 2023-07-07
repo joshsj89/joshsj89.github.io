@@ -44,6 +44,12 @@
     cursor: not-allowed;
 }
 
+.page.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
 .intro {
     padding: 50px;
     margin-top: 30px;
@@ -75,6 +81,22 @@
 @keyframes spin {
     0% { transform: perspective(500px) rotateY(0deg); }
     100% { transform: perspective(500px) rotateY(-360deg); }
+}
+
+.about {
+    padding: 50px;
+    margin-top: 30px;
+    height: 800px; /* To enable scrolling */
+    text-align: center;
+    font-size: 35px;
+}
+
+.projects {
+    padding: 50px;
+    margin-top: 30px;
+    height: 800px; /* To enable scrolling */
+    text-align: center;
+    font-size: 35px;
 }
   
 .main {

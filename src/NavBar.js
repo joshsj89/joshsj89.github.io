@@ -1,41 +1,59 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { ACTIONS } from './App';
 import "./styles.css";
 
-function NavBar() {
+function NavBar({ dispatch, state }) {
+    const [hidden, setHidden] = useState(true);
+
     // Directly manipulating DOM because it's common for the scroll event
     useEffect(() => {
-        const handleScroll = () => {
-            const nameHeight = document.querySelector(".name").offsetHeight;
-            const headerTitle = document.querySelector(".header-title");
+        if (state.Home) {
+            const handleScroll = () => {
+                const name = document.querySelector(".name");
+                if (name == null) {
+                    return;
+                }
 
-            if (window.scrollY < nameHeight) { // If the user is at the top of the page, hide the header title
-                headerTitle.classList.add('hidden');
-                headerTitle.classList.add('unclickable');
-            } else { // If the user is not at the top of the page, show the header title
-                headerTitle.classList.remove('hidden');
-                headerTitle.classList.remove('unclickable');
+                const nameHeight = name.offsetHeight;
+                if (window.scrollY < nameHeight) { // If the user is at the top of the page, hide the header title
+                    setHidden(true);
+                } else { // If the user is not at the top of the page, show the header title
+                    setHidden(false);
+                }
+            };
+    
+            window.addEventListener('scroll', handleScroll);
+    
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
             }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
+        } else {
+            setHidden(false);
         }
-    }, []);
+
+    });
 
     return (
         <nav className="navbar">
             <div className="links">
-                <a href="#about">About</a>
+                <a
+                    //href="#about"
+                    onClick={() => dispatch({ type: ACTIONS.DISPLAY_ABOUT, payload: { state } })}
+                >About
+                </a>
             </div>
-            <a 
-                className="header-title hidden unclickable" 
-                href="/"
-                >Josh Kindarara
+            <a
+                className={`header-title ${hidden ? 'hidden unclickable' : ''}`}
+                //href="/"
+                onClick={() => dispatch({ type: ACTIONS.DISPLAY_HOME, payload: { state } })}
+            >Josh Kindarara
             </a>
             <div className="links">
-                <a href="#projects">Projects</a>
+                <a
+                    //href="#projects"
+                    onClick={() => dispatch({ type: ACTIONS.DISPLAY_PROJECTS, payload: { state } })}
+                >Projects
+                </a>
             </div>
         </nav>
     );
