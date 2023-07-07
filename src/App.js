@@ -1,4 +1,5 @@
-import NavBar from "./NavBar";
+import Headshot from './Headshot'
+import NavBar from './NavBar';
 
 function App() {
     return (
@@ -8,11 +9,7 @@ function App() {
                 <div className="intro">
                     <h1 className="name">Josh Kindarara</h1>
                     <h2>Software Engineer</h2>
-                    <img 
-                        className="headshot" 
-                        src="images/headshot.jpg"
-                        alt="Headshot" 
-                    />
+                    <Headshot />
                 </div>
             </div>
         </div>
