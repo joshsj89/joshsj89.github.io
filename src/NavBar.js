@@ -36,24 +36,26 @@ function NavBar({ dispatch, state }) {
     return (
         <nav className="navbar">
             <div className="links">
-                <a
+                <button
+                    className='link-button'
                     //href="#about"
                     onClick={() => dispatch({ type: ACTIONS.DISPLAY_ABOUT, payload: { state } })}
                 >About
-                </a>
+                </button>
             </div>
-            <a
-                className={`header-title ${hidden ? 'hidden unclickable' : ''}`}
+            <button
+                className={`header-title link-button ${hidden ? 'hidden unclickable' : ''}`}
                 //href="/"
                 onClick={() => dispatch({ type: ACTIONS.DISPLAY_HOME, payload: { state } })}
             >Josh Kindarara
-            </a>
+            </button>
             <div className="links">
-                <a
+                <button
+                    className='link-button'
                     //href="#projects"
                     onClick={() => dispatch({ type: ACTIONS.DISPLAY_PROJECTS, payload: { state } })}
                 >Projects
-                </a>
+                </button>
             </div>
         </nav>
     );

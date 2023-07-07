@@ -25,18 +25,29 @@
     opacity: 0;
 }
 
-.links a {
+.links button {
     float: left;
+    font-size: 30px;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 30px;
 }
   
-.links a:hover {
+.links button:hover {
     background-color: #ddd;
     color: black;
+    height: 70px;
+}
+
+.link-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
 
 .unclickable {
@@ -114,7 +125,7 @@
       font-size: 20px;
     }
   
-    .links a {
+    .links button {
       font-size: 15px;
     }
   
