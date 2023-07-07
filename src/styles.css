@@ -3,6 +3,7 @@
     overflow: hidden;
     position: fixed;
     top: 0;
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -12,7 +13,7 @@
 .header-title {
     margin: 0;
     padding: 0;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -30,7 +31,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 30px;
 }
   
 .links a:hover {
@@ -44,15 +45,17 @@
 }
 
 .intro {
-    padding: 16px;
+    padding: 50px;
     margin-top: 30px;
     height: 1500px; /* To enable scrolling */
     text-align: center;
+    font-size: 35px;
 }
 
 .headshot {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    max-width: 275px;
+    height: auto;
     border-radius: 50%;
     margin: 0;
     padding: 0;
@@ -63,5 +66,28 @@
 .main {
     padding: 16px;
     margin-top: 30px;
-    height: 1500px; /* Used in this example to enable scrolling */
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+      height: 60px;
+    }
+  
+    .header-title {
+      font-size: 20px;
+    }
+  
+    .links a {
+      font-size: 15px;
+    }
+  
+    .intro {
+      padding: 30px;
+      font-size: 20 px;
+    }
+  
+    .headshot {
+      max-width: 200px;
+    }
+  }
