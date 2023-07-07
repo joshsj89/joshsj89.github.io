@@ -8,10 +8,10 @@ function NavBar() {
             const nameHeight = document.querySelector(".name").offsetHeight;
             const headerTitle = document.querySelector(".header-title");
 
-            if (window.scrollY < nameHeight) {
+            if (window.scrollY < nameHeight) { // If the user is at the top of the page, hide the header title
                 headerTitle.classList.add('hidden');
                 headerTitle.classList.add('unclickable');
-            } else {
+            } else { // If the user is not at the top of the page, show the header title
                 headerTitle.classList.remove('hidden');
                 headerTitle.classList.remove('unclickable');
             }
