@@ -11,13 +11,10 @@ export const ACTIONS = {
 }
 
 function reducer(state, { type, payload }) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
     switch (type) {
         case ACTIONS.DISPLAY_HOME:
-            if (payload.state.Home) {
-                // scroll to top of page & hide header title
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-
             return {
                 Home: true,
                 About: false,
