@@ -1,12 +1,12 @@
 import { useReducer } from 'react';
-import AboutPage from './AboutPage';
+import SkillsPage from './SkillsPage';
 import HomePage from './HomePage';
 import NavBar from './NavBar';
 import ProjectsPage from './ProjectsPage';
 
 export const ACTIONS = {
     DISPLAY_HOME: 'display-home',
-    DISPLAY_ABOUT: 'display-about',
+    DISPLAY_SKILLS: 'display-skills',
     DISPLAY_PROJECTS: 'display-projects'
 }
 
@@ -17,28 +17,28 @@ function reducer(state, { type, payload }) {
         case ACTIONS.DISPLAY_HOME:
             return {
                 Home: true,
-                About: false,
+                Skills: false,
                 Projects: false
             };
-        case ACTIONS.DISPLAY_ABOUT:
+        case ACTIONS.DISPLAY_SKILLS:
             return {
                 Home: false,
-                About: true,
+                Skills: true,
                 Projects: false
             };
         case ACTIONS.DISPLAY_PROJECTS:
             return {
                 Home: false,
-                About: false,
+                Skills: false,
                 Projects: true
             };
     }
 }
 
 function App() {    
-    const [{ Home, About, Projects }, dispatch] = useReducer(reducer, { 
+    const [{ Home, Skills, Projects }, dispatch] = useReducer(reducer, { 
         Home: true, 
-        About: false, 
+        Skills: false, 
         Projects: false 
     });
 
@@ -47,17 +47,17 @@ function App() {
             <div className="App">
                 <NavBar 
                     dispatch={dispatch}
-                    state={{Home, About, Projects}} />
+                    state={{Home, Skills, Projects}} />
                 <HomePage />
             </div>
         );
-    } else if (About) {
+    } else if (Skills) {
         return (
             <div className="App">
                 <NavBar 
                     dispatch={dispatch}
-                    state={{Home, About, Projects}} />
-                <AboutPage />
+                    state={{Home, Skills, Projects}} />
+                <SkillsPage />
             </div>
         );
     } else if (Projects) {
@@ -65,7 +65,7 @@ function App() {
             <div className="App">
                 <NavBar 
                     dispatch={dispatch}
-                    state={{Home, About, Projects}} />
+                    state={{Home, Skills, Projects}} />
                 <ProjectsPage />
             </div>
         );

@@ -38,9 +38,9 @@ function NavBar({ dispatch, state }) {
             <div className="links">
                 <button
                     className='link-button'
-                    //href="#about"
-                    onClick={() => dispatch({ type: ACTIONS.DISPLAY_ABOUT, payload: { state } })}
-                >About
+                    //href="#skills"
+                    onClick={() => dispatch({ type: ACTIONS.DISPLAY_SKILLS, payload: { state } })}
+                >Skills
                 </button>
             </div>
             <button
