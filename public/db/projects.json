@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Portolio Website",
+        "description": "Portfolio website to showcase my projects and skills.",
+        "image": "",
+        "link": "",
+        "tech": ["JavaScript", "HTML", "CSS", "React", "Node.js"]
+    },
+    {
+        "name": "Polaris",
+        "description": "2D game that teaches players about ocean pollution solutions through gameplay mechanics and messaging",
+        "image": "",
+        "link": "",
+        "tech": ["Unity", "C#"]
+    },
+    {
+        "name": "Canvas Module PDF Downloader",
+        "description": "A browser extension that can download all PDFs from a Canvas module either individually or as a combined file",
+        "image": "",
+        "link": "https://github.com/joshsj89/Canvas-Module-PDF-Downloader",
+        "tech": ["JavaScript", "HTML"]
+    },
+    {
+        "name": "CSV Manager",
+        "description": "Module that allows one to read from, write to, and manage a CSV file",
+        "image": "",
+        "link": "https://github.com/joshsj89/CSV-Manager",
+        "tech": ["JavaScript", "HTML", "Node.js"]
+    },
+    {
+        "name": "JPEG Filename Date Stamper",
+        "description": "Modifies the EXIF data of JPEG files by extracting the date/time from the filename and updating the EXIF tags",
+        "image": "",
+        "link": "https://github.com/joshsj89/JPEG-Filename-Date-Stamper",
+        "tech": ["JavaScript", "HTML", "Node.js"]
+    },
+    {
+        "name": "JPEG Time Mismatch Fixer",
+        "description": "Fixes the time discrepancy between the photo's time and real time",
+        "image": "",
+        "link": "https://github.com/joshsj89/JPEG-Time-Mismatch-Fixer",
+        "tech": ["JavaScript", "HTML", "Node.js"]
+    },
+    {
+        "name": "Anchor: Endless Possibilities",
+        "description": "Created a high school yearbook over the pandemic and served as the Editor-in-Chief and the main photographer",
+        "image": "",
+        "link": "",
+        "tech": ["Adobe Photoshop", "LumaPix FotoFusion"]
+    }
+  ]
+  
