@@ -1,16 +1,16 @@
 [
     {
-        "name": "Portolio Website",
+        "name": "Portfolio Website",
         "description": "Portfolio website to showcase my projects and skills.",
-        "image": "",
+        "image": "images/website.png",
         "link": "",
         "tech": ["JavaScript", "HTML", "CSS", "React", "Node.js"]
     },
     {
         "name": "Polaris",
         "description": "2D game that teaches players about ocean pollution solutions through gameplay mechanics and messaging",
-        "image": "",
-        "link": "",
+        "image": "images/polaris.png",
+        "link": "https://polarisscu.itch.io/polaris",
         "tech": ["Unity", "C#"]
     },
     {
@@ -44,7 +44,7 @@
     {
         "name": "Anchor: Endless Possibilities",
         "description": "Created a high school yearbook over the pandemic and served as the Editor-in-Chief and the main photographer",
-        "image": "",
+        "image": "images/yearbook.png",
         "link": "",
         "tech": ["Adobe Photoshop", "LumaPix FotoFusion"]
     }
