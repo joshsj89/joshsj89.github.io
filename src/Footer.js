@@ -14,14 +14,14 @@ function Footer() {
                         </a> 
                     </li>
                     <li>
-                    <a href="https://www.github.com/joshsj89" target="_blank">
-                        <img src="images/github-mark-white.png" alt="GitHub" />
-                    </a> 
+                        <a href="https://www.github.com/joshsj89" target="_blank">
+                            <img src="images/github-mark-white.png" alt="GitHub" />
+                        </a> 
                     </li>
                     <li>
-                    <a href="mailto:joshsj89@gmail.com" target="_blank">
-                        <img src="images/email.png" alt="Email" />
-                    </a> 
+                        <a href="mailto:joshsj89@gmail.com" target="_blank">
+                            <img src="images/email.png" alt="Email" />
+                        </a> 
                     </li>
                 </ul>
             </nav>
