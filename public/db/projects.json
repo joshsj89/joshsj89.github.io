@@ -16,7 +16,7 @@
     {
         "name": "Canvas Module PDF Downloader",
         "description": "A browser extension that can download all PDFs from a Canvas module either individually or as a combined file",
-        "image": "",
+        "image": "images/canvas-module-pdf-downloader.png",
         "link": "https://github.com/joshsj89/Canvas-Module-PDF-Downloader",
         "tech": ["JavaScript", "HTML"]
     },
