@@ -1,9 +1,11 @@
 import Intro from './Intro';
+import ResumeButton from './ResumeButton';
 
 function HomePage() {
     return (
-        <div>
+        <div className="home-page">
             <Intro />
+            <ResumeButton />
         </div>
     );
 }

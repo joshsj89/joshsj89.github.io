@@ -1,3 +1,5 @@
+/* Navbar */
+
 .navbar {
     background-color: #333;
     overflow: hidden;
@@ -61,6 +63,18 @@
     transition: opacity 0.3s ease;
 }
 
+/* Home */
+
+.home-page {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .intro {
     padding: 50px;
     margin-top: 30px;
@@ -96,6 +110,22 @@
     100% {
         transform: perspective(500px) rotateY(-360deg);
     }
+}
+
+.resume-button {
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.resume-button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 /* Footer */
