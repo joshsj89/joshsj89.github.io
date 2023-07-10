@@ -78,6 +78,7 @@ function App() {
                 <NavBar 
                     dispatch={dispatch}
                     state={{Home, Skills, Projects, Contact}} />
+                <SkillsPage className="page hidden" />
                 <Footer 
                     dispatch={dispatch}
                     state={{Home, Skills, Projects, Contact}} />
