@@ -1,10 +1,10 @@
-import Intro from './Intro';
+import About from './About';
 import ResumeButton from './ResumeButton';
 
 function HomePage() {
     return (
         <div className="home-page">
-            <Intro />
+            <About />
             <ResumeButton />
         </div>
     );
