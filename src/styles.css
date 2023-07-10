@@ -98,6 +98,8 @@
     }
 }
 
+/* Footer */
+
 footer {
     background-color: #333;
     overflow: hidden;
@@ -151,6 +153,8 @@ footer p {
     transition: 0.3s;
 }
 
+/* Skills */
+
 .skills {
     padding: 50px;
     margin-top: 30px;
@@ -159,6 +163,7 @@ footer p {
 }
 
 /* Projects */
+
 .projects {
     padding: 50px;
     margin-top: 30px;
@@ -229,7 +234,7 @@ footer p {
     margin-bottom: 10px;
 }
 
-/* //////// */
+/*...............................................*/
 
 .main {
     padding: 16px;
@@ -259,6 +264,8 @@ footer p {
         max-width: 200px;
     }
 
+    /* Footer */
+
     footer p {
         font-size: 15px;
     }
@@ -271,5 +278,26 @@ footer p {
         padding: 5px;
         width: 20px;
         height: 20px;
+    }
+
+    /* Projects */
+
+    .projects {
+        font-size: 28px;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-image {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .project-tech li {
+        font-size: 20px;
     }
 }
