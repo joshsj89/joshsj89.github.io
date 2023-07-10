@@ -1,8 +1,9 @@
+import { ACTIONS } from './App';
 import './styles.css'
 
 const year = new Date().getFullYear();
 
-function Footer() {
+function Footer({ dispatch, state }) {
     return (
         <footer>
             <p>© {year} Josh Kindarara</p>
@@ -19,9 +20,9 @@ function Footer() {
                         </a> 
                     </li>
                     <li>
-                        <a href="mailto:joshsj89@gmail.com" target="_blank">
+                        <button onClick={() => dispatch({ type: ACTIONS.DISPLAY_CONTACT, payload: { state } })}>
                             <img src="images/email.png" alt="Email" />
-                        </a> 
+                        </button> 
                     </li>
                 </ul>
             </nav>
