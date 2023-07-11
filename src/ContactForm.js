@@ -16,7 +16,7 @@ function ContactForm() {
                         name="name" 
                         id="full-name" 
                         placeholder="John Doe"
-                        required="" />
+                        required />
                 </div>
                 <div className="form-group">
                     <label for="email-address">E-mail</label>
@@ -25,7 +25,7 @@ function ContactForm() {
                         name="_replyto"
                         id="email-address"
                         placeholder="email@domain.tld"
-                        required="" />
+                        required />
                 </div>
                 <div className="form-group">
                     <label for="message">Message</label>
@@ -34,7 +34,7 @@ function ContactForm() {
                         name="message"
                         id="message"
                         placeholder="Your message here..."
-                        required="" >
+                        required >
                     </textarea>
                 </div>
                 <input
