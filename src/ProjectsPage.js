@@ -15,7 +15,7 @@ function ProjectsPage() {
             <h1>Projects</h1>
             <div className="project-list">
                 {projects.map((project, index) => {
-                    return <Project project={project} key={index} />;
+                    return <Project project={project} />;
                 })
             }
             </div>

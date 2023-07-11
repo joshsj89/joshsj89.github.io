@@ -182,6 +182,7 @@ footer p {
     border: none;
     cursor: pointer;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .social-media a img,
