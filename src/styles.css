@@ -389,6 +389,11 @@ fieldset {
         height: 20px;
     }
 
+    .social-media button {
+        height: 20px;
+        margin: 5px;
+    }
+
     /* Projects */
 
     .projects {
@@ -408,5 +413,16 @@ fieldset {
 
     .project-tech li {
         font-size: 20px;
+    }
+
+    /* Contact */
+
+    .contact-page {
+        padding: 50px;
+        margin: 50px 0;
+    }
+    
+    #contact-form-inputs {
+        width: auto;
     }
 }
