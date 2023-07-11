@@ -1,9 +1,9 @@
-import EmailForm from './EmailForm';
+import ContactForm from './ContactForm';
 
 function ContactPage() {
     return (
         <div className="contact-page">
-            <EmailForm />
+            <ContactForm />
         </div>
     );
 }
