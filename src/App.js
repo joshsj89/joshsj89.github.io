@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import ContactPage from './ContactPage';
 import Footer from './Footer';
 import HomePage from './HomePage';
@@ -59,6 +59,20 @@ function App() {
         Projects: false,
         Contact: false
     });
+
+    useEffect(() => {
+        const hash = window.location.hash;
+        
+        if (hash === '#skills') {
+            dispatch({ type: ACTIONS.DISPLAY_SKILLS, payload: { state: { Home, Skills, Projects, Contact } } });
+        } else if (hash === '#projects') {
+            dispatch({ type: ACTIONS.DISPLAY_PROJECTS, payload: { state: { Home, Skills, Projects, Contact } } });
+        } else if (hash === '#contact') {
+            dispatch({ type: ACTIONS.DISPLAY_CONTACT, payload: { state: { Home, Skills, Projects, Contact } } });
+        } else {
+            dispatch({ type: ACTIONS.DISPLAY_HOME, payload: { state: { Home, Skills, Projects, Contact } } });
+        }
+    }, []);
 
     if (Home) {
         return (
