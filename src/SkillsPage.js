@@ -1,6 +1,6 @@
-function SkillsPage() {
+function SkillsPage(props) {
     return (
-        <div className="skills">
+        <div className={`${props.className} skills`}>
             <h1>Skills</h1>
         </div>
     );

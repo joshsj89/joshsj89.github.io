@@ -74,55 +74,20 @@ function App() {
         }
     }, []);
 
-    if (Home) {
-        return (
-            <div className="App">
-                <NavBar 
-                    dispatch={dispatch}
-                    state={{Home, Skills, Projects, Contact}} />
-                <HomePage className="page hidden" />
-                <Footer 
-                    dispatch={dispatch}
-                    state={{Home, Skills, Projects, Contact}} />
-            </div>
-        );
-    } else if (Skills) {
-        return (
-            <div className="App">
-                <NavBar 
-                    dispatch={dispatch}
-                    state={{Home, Skills, Projects, Contact}} />
-                <SkillsPage className="page hidden" />
-                <Footer 
-                    dispatch={dispatch}
-                    state={{Home, Skills, Projects, Contact}} />
-            </div>
-        );
-    } else if (Projects) {
-        return (
-            <div className="App">
-                <NavBar 
-                    dispatch={dispatch}
-                    state={{Home, Skills, Projects, Contact}} />
-                <ProjectsPage className="page hidden" />
-                <Footer 
-                    dispatch={dispatch}
-                    state={{Home, Skills, Projects, Contact}} />
-            </div>
-        );
-    } else if (Contact) {
-        return (
-            <div className="App">
-                <NavBar 
-                    dispatch={dispatch}
-                    state={{Home, Skills, Projects, Contact}} />
-                <ContactPage className="page hidden" />
-                <Footer 
-                    dispatch={dispatch}
-                    state={{Home, Skills, Projects, Contact}} />
-            </div>
-        );
-    }
+    return (
+        <div className="App">
+            <NavBar 
+                dispatch={dispatch}
+                state={{Home, Skills, Projects, Contact}} />
+            {Home && <HomePage className="page" />}
+            {Skills && <SkillsPage className="page" />}
+            {Projects && <ProjectsPage className="page" />}
+            {Contact && <ContactPage className="page" />}
+            <Footer 
+                dispatch={dispatch}
+                state={{Home, Skills, Projects, Contact}} />
+        </div>
+    );
 }
 
 export default App;

@@ -1,8 +1,8 @@
 import ContactForm from './ContactForm';
 
-function ContactPage() {
+function ContactPage(props) {
     return (
-        <div className="contact-page">
+        <div className={`${props.className} contact-page`}>
             <ContactForm />
         </div>
     );

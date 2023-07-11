@@ -1,9 +1,9 @@
 import About from './About';
 import ResumeButton from './ResumeButton';
 
-function HomePage() {
+function HomePage(props) {
     return (
-        <div className="home-page">
+        <div className={`${props.className} home-page`}>
             <About />
             <ResumeButton />
         </div>

@@ -9,9 +9,9 @@ try {
     console.error('Error:', error);
 }
 
-function ProjectsPage() {
+function ProjectsPage(props) {
     return (
-        <div className="projects">
+        <div className={`${props.className} projects`}>
             <h1>Projects</h1>
             <div className="project-list">
                 {projects.map((project, index) => {

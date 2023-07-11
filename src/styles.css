@@ -57,15 +57,17 @@
     cursor: not-allowed;
 }
 
-.page.hidden {
-    opacity: 0;
-    pointer-events: none;
+
+.page {
+    margin-top: 30px;
     transition: opacity 0.3s ease;
 }
+
 
 /* Home */
 
 .home-page {
+    margin-top: 30px;
     margin-bottom: 50px;
     text-align: center;
     font-size: 35px;
