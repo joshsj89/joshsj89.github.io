@@ -21,9 +21,9 @@ function NavBar({ dispatch, state }) {
                     setHidden(false);
                 }
             };
-    
+
             window.addEventListener('scroll', handleScroll);
-    
+            
             return () => {
                 window.removeEventListener('scroll', handleScroll);
             }
@@ -46,7 +46,11 @@ function NavBar({ dispatch, state }) {
             <button
                 className={`header-title link-button ${hidden ? 'hidden unclickable' : ''}`}
                 //href="/"
-                onClick={() => dispatch({ type: ACTIONS.DISPLAY_HOME, payload: { state } })}
+                onClick={() => {
+                    setHidden(true);
+                    dispatch({ type: ACTIONS.DISPLAY_HOME, payload: { state } })
+                    }
+                }
             >Josh Kindarara
             </button>
             <div className="links">
