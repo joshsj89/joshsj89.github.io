@@ -77,7 +77,7 @@ function SkillsPage(props) {
                         <p className="skill-description">I've used <strong>Git</strong> for almost all of <a href="#projects" target="_blank">my projects</a>, so I am very familiar with it.</p>
                     </div>
                     <div className="skill skills-col">
-                        <span className="skill-images one-icon">
+                        <span className="skill-images one-icon wide-logo">
                             <img 
                                 src="images/unity_logo_black.svg" 
                                 alt="Unity" />
@@ -86,7 +86,7 @@ function SkillsPage(props) {
                         <p className="skill-description">My team and I used <strong>Unity</strong> to create <a href={props.projects[1].link} target="_blank">Polaris</a>.</p>
                     </div>
                     <div className="skill skills-col">
-                        <span className="skill-images one-icon">
+                        <span className="skill-images one-icon wide-logo">
                             <img 
                                 src="https://nodejs.dev/static/images/brand/logos-js-right/dark.svg" 
                                 alt="Node.js" />
