@@ -485,27 +485,23 @@ fieldset {
     }
 
     .skill-images img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .skill-images.two-icons img {
-        width: 80px;
-        height: 80px;
+        width: 125px;
+        height: 125px;
     }
 
     .skill-images.wide-logo img {
-        width: 170px;
-        height: 85px;
+        width: 250px;
+        height: 125px;
     }
 
     .skill-name {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .skill-description {
         font-size: 15px;
     }
+    
     /* Projects */
 
     .projects {
