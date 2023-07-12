@@ -23,7 +23,7 @@ function SkillsPage(props) {
                                 alt="JavaScript" />
                         </span>
                         <h4 className="skill-name">JavaScript</h4>
-                        <p className="skill-description"><strong>JavaScript</strong> was my third language. I got interested in learning after looking at some open-source code. I learned it and started working at multiple projects including the Canvas Module PDF Downloader.</p>
+                        <p className="skill-description"><strong>JavaScript</strong> was my third language. I got interested in learning after looking at some open-source code. I learned it and started working on multiple projects including the <a href={props.projects[2].link} target="_blank">Canvas Module PDF Downloader</a>.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images two-icons">
@@ -35,7 +35,7 @@ function SkillsPage(props) {
                                 alt="CSS3" />
                         </span>
                         <h4 className="skill-name">HTML/CSS</h4>
-                        <p className="skill-description"><strong>HTML/CSS</strong> was what I used to create some web extensions and design this site.</p>
+                        <p className="skill-description"><strong>HTML/CSS</strong> was what I used to create <a href="#projects" target="_blank">some web extensions</a> and design <a href="/">this site</a>.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images one-icon">
@@ -44,7 +44,7 @@ function SkillsPage(props) {
                                 alt="Python" />
                         </span>
                         <h4 className="skill-name">Python</h4>
-                        <p className="skill-description">I learned <strong>Python</strong> after already being very comfortable with C++. I learned it mainly through tutoring new programmers.</p>
+                        <p className="skill-description">I learned <strong>Python</strong> after already being very comfortable with <strong>C++</strong>. I learned it mainly through tutoring new programmers.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images one-icon">
@@ -53,7 +53,7 @@ function SkillsPage(props) {
                                 alt="C#" />
                         </span>
                         <h4 className="skill-name">C#</h4>
-                        <p className="skill-description">I learned <strong>C#</strong> while creating Polaris in <strong>Unity</strong>.</p>
+                        <p className="skill-description">I learned <strong>C#</strong> while creating <a href={props.projects[1].link} target="_blank">Polaris</a> in <strong>Unity</strong>.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images one-icon">
@@ -62,7 +62,7 @@ function SkillsPage(props) {
                                 alt="React" />
                         </span>
                         <h4 className="skill-name">React</h4>
-                        <p className="skill-description">I created this website with <strong>React</strong>.</p>
+                        <p className="skill-description">I created <a href="/">this website</a> with <strong>React</strong>.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images two-icons">
@@ -74,7 +74,7 @@ function SkillsPage(props) {
                                 alt="GitHub" />
                         </span>
                         <h4 className="skill-name">Git</h4>
-                        <p className="skill-description">I've used <strong>Git</strong> for almost all of my projects, so I am very familiar with it.</p>
+                        <p className="skill-description">I've used <strong>Git</strong> for almost all of <a href="#projects" target="_blank">my projects</a>, so I am very familiar with it.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images one-icon">
@@ -83,7 +83,7 @@ function SkillsPage(props) {
                                 alt="Unity" />
                         </span>
                         <h4 className="skill-name">Unity</h4>
-                        <p className="skill-description">My team and I used <strong>Unity</strong> to create Polaris.</p>
+                        <p className="skill-description">My team and I used <strong>Unity</strong> to create <a href={props.projects[1].link} target="_blank">Polaris</a>.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images one-icon">
@@ -92,7 +92,7 @@ function SkillsPage(props) {
                                 alt="Node.js" />
                         </span>
                         <h4 className="skill-name">Node.js</h4>
-                        <p className="skill-description">As I learned JavaScript, I utilized <strong>Node.js</strong> and its REPL.</p>
+                        <p className="skill-description">As I learned <strong>JavaScript</strong>, I utilized <strong>Node.js</strong> and its REPL.</p>
                     </div>
                 </div>
             </div>

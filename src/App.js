@@ -6,6 +6,15 @@ import NavBar from './NavBar';
 import ProjectsPage from './ProjectsPage';
 import SkillsPage from './SkillsPage';
 
+let projects;
+
+try {
+    const response = await fetch('db/projects.json');
+    projects = await response.json();
+} catch (error) {
+    console.error('Error:', error);
+}
+
 export const ACTIONS = {
     DISPLAY_HOME: 'display-home',
     DISPLAY_SKILLS: 'display-skills',
@@ -80,8 +89,8 @@ function App() {
                 dispatch={dispatch}
                 state={{Home, Skills, Projects, Contact}} />
             {Home && <HomePage className="page" />}
-            {Skills && <SkillsPage className="page" />}
-            {Projects && <ProjectsPage className="page" />}
+            {Skills && <SkillsPage className="page" projects={projects} />}
+            {Projects && <ProjectsPage className="page" projects={projects} />}
             {Contact && <ContactPage className="page" />}
             <Footer 
                 dispatch={dispatch}
