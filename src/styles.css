@@ -470,6 +470,42 @@ fieldset {
         margin: 5px;
     }
 
+    /* Skills */
+
+    .skills-page {
+        padding: 30px;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .skills-col {
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+
+    .skill-images img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill-images.two-icons img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .skill-images.wide-logo img {
+        width: 170px;
+        height: 85px;
+    }
+
+    .skill-name {
+        font-size: 20px;
+    }
+
+    .skill-description {
+        font-size: 15px;
+    }
     /* Projects */
 
     .projects {
