@@ -287,16 +287,22 @@ footer p {
 /* Projects */
 
 .projects-page {
-    padding: 50px 50px 50px 50px;
+    padding: 50px 100px;
     text-align: center;
     font-size: 35px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .project {
     display: flex;
     border: 3px solid black;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 0px 0px;
     justify-content: center;
     align-items: center;
     border-radius: 50px;
@@ -304,7 +310,7 @@ footer p {
 }
 
 .project:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.3s;
 }
 
@@ -318,6 +324,7 @@ footer p {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+    transition: 0.2s;
 }
 
 .project-image img:hover {
@@ -337,7 +344,7 @@ footer p {
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 0px;
     list-style: none;
     font-size: 30px;
 }
@@ -346,13 +353,11 @@ footer p {
     background-color: #f0f0f0;
     border-radius: 5px;
     padding: 5px 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 0px 5px;
 }
 
 .project-description {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 10px 5px;
 }
 
 /* Contact */
@@ -479,7 +484,7 @@ fieldset {
         padding: 30px;
         margin-top: 30px;
         text-align: center;
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .skills-col {
@@ -507,13 +512,19 @@ fieldset {
     
     /* Projects */
 
-    .projects {
-        font-size: 28px;
+    .projects-page {
+        padding: 30px;
+        font-size: 30px;
+    }
+
+    .project-list {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .project {
         flex-direction: column;
-        align-items: center;
+        margin: 0px 0px;
     }
 
     .project-image {
@@ -523,7 +534,8 @@ fieldset {
     }
 
     .project-tech li {
-        font-size: 20px;
+        font-size: 15px;
+        margin-bottom: 5px;
     }
 
     /* Contact */
