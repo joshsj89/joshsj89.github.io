@@ -14,7 +14,9 @@ function NavBar({ dispatch, state }) {
                     return;
                 }
 
-                const nameHeight = name.offsetHeight;
+                const nameMargin = parseFloat(window.getComputedStyle(name).marginTop); // Get the margin of the header title
+                const nameHeight = name.offsetHeight + nameMargin; // Get the height of the header title
+
                 if (window.scrollY < nameHeight) { // If the user is at the top of the page, hide the header title
                     setHidden(true);
                 } else { // If the user is not at the top of the page, show the header title
