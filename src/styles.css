@@ -219,6 +219,8 @@ footer p {
 .skills-row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .skills-col {
