@@ -273,12 +273,15 @@ footer p {
 }
 
 .skill-name {
-    margin-top: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 40px;
 }
 
 .skill-description {
     margin-top: 0;
     margin-bottom: 10px;
+    font-size: 30px;
 }
 
 /* Projects */
