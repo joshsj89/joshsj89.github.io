@@ -22,11 +22,17 @@ export const ACTIONS = {
     DISPLAY_CONTACT: 'display-contact'
 }
 
-function reducer(state, { type, payload }) {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+function reducer(state, { type }) {
+    const { Home, Skills, Projects, Contact } = state; 
     
     switch (type) {
         case ACTIONS.DISPLAY_HOME:
+            if (Home) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+            }
+
             window.location.hash = '';
             return {
                 Home: true,
@@ -35,6 +41,12 @@ function reducer(state, { type, payload }) {
                 Contact: false
             };
         case ACTIONS.DISPLAY_SKILLS:
+            if (Skills) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+            }
+            
             window.location.hash = '#skills';
             return {
                 Home: false,
@@ -43,6 +55,12 @@ function reducer(state, { type, payload }) {
                 Contact: false
             };
         case ACTIONS.DISPLAY_PROJECTS:
+            if (Projects) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+            }
+
             window.location.hash = '#projects';
             return {
                 Home: false,
@@ -51,6 +69,12 @@ function reducer(state, { type, payload }) {
                 Contact: false
             };
         case ACTIONS.DISPLAY_CONTACT:
+            if (Contact) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: 0, behavior: 'instant' });
+            }
+
             window.location.hash = '#contact';
             return {
                 Home: false,
@@ -73,13 +97,13 @@ function App() {
         const hash = window.location.hash;
         
         if (hash === '#skills') {
-            dispatch({ type: ACTIONS.DISPLAY_SKILLS, payload: { state: { Home, Skills, Projects, Contact } } });
+            dispatch({ type: ACTIONS.DISPLAY_SKILLS });
         } else if (hash === '#projects') {
-            dispatch({ type: ACTIONS.DISPLAY_PROJECTS, payload: { state: { Home, Skills, Projects, Contact } } });
+            dispatch({ type: ACTIONS.DISPLAY_PROJECTS });
         } else if (hash === '#contact') {
-            dispatch({ type: ACTIONS.DISPLAY_CONTACT, payload: { state: { Home, Skills, Projects, Contact } } });
+            dispatch({ type: ACTIONS.DISPLAY_CONTACT });
         } else {
-            dispatch({ type: ACTIONS.DISPLAY_HOME, payload: { state: { Home, Skills, Projects, Contact } } });
+            dispatch({ type: ACTIONS.DISPLAY_HOME });
         }
     }, []);
 
