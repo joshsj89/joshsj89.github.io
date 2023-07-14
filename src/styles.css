@@ -344,6 +344,10 @@ footer p {
     text-decoration: none;
 }
 
+.project-name:visited {
+    color: #0000ee;
+}
+
 .project-name:hover {
     color: #333;
 }
