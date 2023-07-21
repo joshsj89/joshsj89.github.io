@@ -1,16 +1,44 @@
 import './styles.css'
 
 function ContactForm() {
+    const handleSubmit = async (e) => {
+        e.preventDefault(); 
+        
+        const formData = new FormData(e.target);
+
+        let response;
+        try {
+            response = await fetch(e.target.action, {
+                method: e.target.method,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(formData).toString()
+            });
+        } catch (error) {
+            console.log(error);
+            alert('Error sending message');
+        }
+
+        if (response.status === 200) {
+            alert('Message sent successfully');
+            e.target.reset();
+        } else {
+            alert('Error sending message');
+        }
+    }
+
     return (
         <form 
+            onSubmit={handleSubmit}
             id="contact-form" 
             name="simple-contact-form" 
             acceptCharset='UTF-8'
-            action="https://formspree.io/f/xaygyber" 
+            action="http://localhost:5000/api/contact" 
             method="POST" >
             <fieldset id="contact-form-inputs" >
                 <div className="form-group">
-                    <label for="full-name">Name</label>
+                    <label htmlFor="full-name">Name</label>
                     <input 
                         type="text" 
                         name="name" 
@@ -19,16 +47,16 @@ function ContactForm() {
                         required />
                 </div>
                 <div className="form-group">
-                    <label for="email-address">E-mail</label>
+                    <label htmlFor="email-address">E-mail</label>
                     <input
                         type="email"
-                        name="_replyto"
+                        name="email_replyto"
                         id="email-address"
                         placeholder="email@domain.tld"
                         required />
                 </div>
                 <div className="form-group">
-                    <label for="message">Message</label>
+                    <label htmlFor="message">Message</label>
                     <textarea
                         rows="5"
                         name="message"
@@ -39,7 +67,7 @@ function ContactForm() {
                 </div>
                 <input
                     type="hidden"
-                    name="_subject"
+                    name="subject"
                     id="email-subject"
                     value="Contact Form Submission" />
             </fieldset>
