@@ -284,6 +284,15 @@ footer p {
     font-size: 30px;
 }
 
+.skill-description a {
+    transition: 0.3s;
+}
+
+.skill-description a:hover {
+    color: #333;
+    transition: 0.3s;
+}
+
 /* Projects */
 
 .projects-page {
