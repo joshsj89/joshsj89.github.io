@@ -10,7 +10,7 @@ function Project({ project, key }) {
             <a 
                 className="project-name"
                 href={project.link}
-                target="_blank" >{project.name}</a>
+                target="_blank" rel="noreferrer" >{project.name}</a>
             <p className="project-description">{project.description}</p>
             <ul className="project-tech">
                 {project.tech.map((tech, index) => {

@@ -10,12 +10,12 @@ function Footer({ dispatch, state }) {
             <nav className="social-media">
                 <ul>
                     <li>
-                        <a href="https://www.linkedin.com/in/joshkindarara" target="_blank">
+                        <a href="https://www.linkedin.com/in/joshkindarara" target="_blank" rel="noreferrer">
                             <img src="images/linkedin.png" alt="LinkedIn" />
                         </a> 
                     </li>
                     <li>
-                        <a href="https://www.github.com/joshsj89" target="_blank">
+                        <a href="https://www.github.com/joshsj89" target="_blank" rel="noreferrer">
                             <img src="images/github-mark-white.png" alt="GitHub" />
                         </a> 
                     </li>
