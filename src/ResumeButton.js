@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ResumeButton() {
+function ResumeButton({ downloadID }) {
     const handleClick = async () => {
         try {
-            const response = await fetch('https://joshsj89-1d7a9e7057c7.herokuapp.com/api/pdf/download/64b92474f706eb41f13dc367');
+            const response = await fetch(`https://joshsj89-1d7a9e7057c7.herokuapp.com/api/pdf/download/${downloadID}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -12,7 +12,7 @@ function ResumeButton() {
             // YYYY-MM-DDTHH:MM:SS.MSSZ -> YYYY_MM_DD
             const date = resume.createdAt.slice(0, 10).replace(/-/g, '_');
 
-            const blob = new Blob([resume.data], {type: 'application/pdf'});
+            const blob = new Blob([new Uint8Array(resume.data.data)], {type: 'application/pdf'});
             const url = window.URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
