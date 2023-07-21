@@ -34,7 +34,7 @@ function ContactForm() {
             id="contact-form" 
             name="simple-contact-form" 
             acceptCharset='UTF-8'
-            action="http://localhost:5000/api/contact" 
+            action="https://joshsj89-1d7a9e7057c7.herokuapp.com/api/contact" 
             method="POST" >
             <fieldset id="contact-form-inputs" >
                 <div className="form-group">
