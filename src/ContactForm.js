@@ -1,6 +1,11 @@
-import './styles.css'
+import './styles.css';
+import ContactSuccessModal from './ContactSuccessModal';
+import { useState } from 'react';
 
 function ContactForm() {
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [isModalSuccess, setIsModalSuccess] = useState(false);
+
     const handleSubmit = async (e) => {
         e.preventDefault(); 
         
@@ -21,61 +26,70 @@ function ContactForm() {
         }
 
         if (response.status === 200) {
-            alert('Message sent successfully');
+            setIsModalVisible(true);
+            setIsModalSuccess(true);
             e.target.reset();
         } else {
-            alert('Error sending message');
+            setIsModalVisible(true);
+            setIsModalSuccess(false);
         }
+
+        setTimeout(() => {
+            setIsModalVisible(false);
+        }, 3000)
     }
 
     return (
-        <form 
-            onSubmit={handleSubmit}
-            id="contact-form" 
-            name="simple-contact-form" 
-            acceptCharset='UTF-8'
-            action="https://joshsj89-1d7a9e7057c7.herokuapp.com/api/contact" 
-            method="POST" >
-            <fieldset id="contact-form-inputs" >
-                <div className="form-group">
-                    <label htmlFor="full-name">Name</label>
-                    <input 
-                        type="text" 
-                        name="name" 
-                        id="full-name" 
-                        placeholder="John Doe"
-                        required />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email-address">E-mail</label>
+        <div>
+            <form 
+                onSubmit={handleSubmit}
+                id="contact-form" 
+                name="simple-contact-form" 
+                acceptCharset='UTF-8'
+                action="https://joshsj89-1d7a9e7057c7.herokuapp.com/api/contact" 
+                method="POST" >
+                <fieldset id="contact-form-inputs" >
+                    <div className="form-group">
+                        <label htmlFor="full-name">Name</label>
+                        <input 
+                            type="text" 
+                            name="name" 
+                            id="full-name" 
+                            placeholder="John Doe"
+                            required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email-address">E-mail</label>
+                        <input
+                            type="email"
+                            name="email_replyto"
+                            id="email-address"
+                            placeholder="email@domain.tld"
+                            required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                            rows="5"
+                            name="message"
+                            id="message"
+                            placeholder="Your message here..."
+                            required >
+                        </textarea>
+                    </div>
                     <input
-                        type="email"
-                        name="email_replyto"
-                        id="email-address"
-                        placeholder="email@domain.tld"
-                        required />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="message">Message</label>
-                    <textarea
-                        rows="5"
-                        name="message"
-                        id="message"
-                        placeholder="Your message here..."
-                        required >
-                    </textarea>
-                </div>
+                        type="hidden"
+                        name="subject"
+                        id="email-subject"
+                        value="Contact Form Submission" />
+                </fieldset>
                 <input
-                    type="hidden"
-                    name="subject"
-                    id="email-subject"
-                    value="Contact Form Submission" />
-            </fieldset>
-            <input
-                id="submit-button"
-                type="submit"
-                value="Submit" />
-        </form>
+                    id="submit-button"
+                    type="submit"
+                    value="Submit" />
+            </form>
+            {isModalVisible && (<ContactSuccessModal visible={isModalVisible} success={isModalSuccess} />)}
+        </div>
     );
 }
 
