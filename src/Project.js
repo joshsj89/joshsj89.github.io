@@ -1,8 +1,8 @@
-function Project({ project, image, key }) {
+function Project({ project, key }) {
     return (
         <div className="project">
             <div className="project-image">
-                <img src={image} alt={project.name} />
+                <img src={project.image} alt={project.name} />
             </div>
             <div className="project-content">
                 <a 

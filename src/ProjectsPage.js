@@ -6,7 +6,7 @@ function ProjectsPage(props) {
             <h1>Projects</h1>
             <div className="project-list">
                 {props.projects.map((project, index) => {
-                    return <Project project={project} image={props.images[index]} key={project._id} />;
+                    return <Project project={project} key={project._id} />;
                 })
             }
             </div>
