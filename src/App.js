@@ -7,10 +7,15 @@ import ProjectsPage from './ProjectsPage';
 import SkillsPage from './SkillsPage';
 
 let projects;
+let projectImages = [];
 
 try {
-    const response = await fetch('db/projects.json');
+    const response = await fetch('https://joshsj89-1d7a9e7057c7.herokuapp.com/api/projects/all');
     projects = await response.json();
+    projectImages = await Promise.all(projects.map(async (project) => {
+        const response = await fetch(`https://joshsj89-1d7a9e7057c7.herokuapp.com/api/projects/image/${project._id}`);
+        return (await response.text()).toString(); 
+    }))
 } catch (error) {
     console.error('Error:', error);
 }
@@ -114,7 +119,7 @@ function App() {
                 state={{Home, Skills, Projects, Contact}} />
             {Home && <HomePage className="page" />}
             {Skills && <SkillsPage className="page" projects={projects} />}
-            {Projects && <ProjectsPage className="page" projects={projects} />}
+            {Projects && <ProjectsPage className="page" projects={projects} images={projectImages} />}
             {Contact && <ContactPage className="page" />}
             <Footer 
                 dispatch={dispatch}
