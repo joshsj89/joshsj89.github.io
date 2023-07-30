@@ -23,7 +23,7 @@ function SkillsPage(props) {
                                 alt="JavaScript" />
                         </span>
                         <h4 className="skill-name">JavaScript</h4>
-                        <p className="skill-description"><strong>JavaScript</strong> was my third language. I got interested in learning after looking at some open-source code. I learned it and started working on multiple projects including the <a href={props.projects[2].link} target="_blank" rel="noreferrer">Canvas Module PDF Downloader</a>.</p>
+                        <p className="skill-description"><strong>JavaScript</strong> was my third language. I got interested in learning after looking at some open-source code. I learned it and started working on multiple projects including the <a href={props.projects[3].link} target="_blank" rel="noreferrer">Canvas Module PDF Downloader</a>.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images two-icons">
@@ -53,7 +53,7 @@ function SkillsPage(props) {
                                 alt="C#" />
                         </span>
                         <h4 className="skill-name">C#</h4>
-                        <p className="skill-description">I learned <strong>C#</strong> while creating <a href={props.projects[1].link} target="_blank" rel="noreferrer">Polaris</a> in <strong>Unity</strong>.</p>
+                        <p className="skill-description">I learned <strong>C#</strong> while creating <a href={props.projects[2].link} target="_blank" rel="noreferrer">Polaris</a> in <strong>Unity</strong>.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images one-icon">
@@ -83,7 +83,7 @@ function SkillsPage(props) {
                                 alt="Unity" />
                         </span>
                         <h4 className="skill-name">Unity</h4>
-                        <p className="skill-description">My team and I used <strong>Unity</strong> to create <a href={props.projects[1].link} target="_blank" rel="noreferrer">Polaris</a>.</p>
+                        <p className="skill-description">My team and I used <strong>Unity</strong> to create <a href={props.projects[2].link} target="_blank" rel="noreferrer">Polaris</a>.</p>
                     </div>
                     <div className="skill skills-col">
                         <span className="skill-images one-icon wide-logo">
