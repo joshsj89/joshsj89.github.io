@@ -325,7 +325,6 @@ footer p {
     align-items: center;
     border-radius: 50px;
     transition: 0.3s;
-    width: 100%;
 }
 
 .project:hover {
@@ -543,7 +542,7 @@ fieldset {
     /* Projects */
 
     .projects-page {
-        padding: 30px;
+        padding: 30px 20px;
         font-size: 30px;
     }
 
