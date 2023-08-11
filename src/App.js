@@ -1,4 +1,5 @@
-import { useEffect, useReducer } from 'react';
+import { useReducer } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import ContactPage from './ContactPage';
 import Footer from './Footer';
 import HomePage from './HomePage';
@@ -33,7 +34,6 @@ function reducer(state, { type }) {
                 window.scrollTo({ top: 0, behavior: 'instant' });
             }
 
-            window.location.hash = '';
             return {
                 Home: true,
                 Skills: false,
@@ -47,7 +47,6 @@ function reducer(state, { type }) {
                 window.scrollTo({ top: 0, behavior: 'instant' });
             }
             
-            window.location.hash = '#skills';
             return {
                 Home: false,
                 Skills: true,
@@ -61,7 +60,6 @@ function reducer(state, { type }) {
                 window.scrollTo({ top: 0, behavior: 'instant' });
             }
 
-            window.location.hash = '#projects';
             return {
                 Home: false,
                 Skills: false,
@@ -75,13 +73,14 @@ function reducer(state, { type }) {
                 window.scrollTo({ top: 0, behavior: 'instant' });
             }
 
-            window.location.hash = '#contact';
             return {
                 Home: false,
                 Skills: false,
                 Projects: false,
                 Contact: true
             };
+        default:
+            return state;
     }
 }
 
@@ -93,34 +92,23 @@ function App() {
         Contact: false
     });
 
-    useEffect(() => {
-        const hash = window.location.hash;
-        
-        if (hash === '#skills') {
-            dispatch({ type: ACTIONS.DISPLAY_SKILLS });
-        } else if (hash === '#projects') {
-            dispatch({ type: ACTIONS.DISPLAY_PROJECTS });
-        } else if (hash === '#contact') {
-            dispatch({ type: ACTIONS.DISPLAY_CONTACT });
-        } else {
-            dispatch({ type: ACTIONS.DISPLAY_HOME });
-        }
-    }, []);
-
     return (
         <div className="App">
             <NavBar 
                 dispatch={dispatch}
                 state={{Home, Skills, Projects, Contact}} />
-            {Home && <HomePage className="page" />}
-            {Skills && <SkillsPage className="page" projects={projects} />}
-            {Projects && <ProjectsPage className="page" projects={projects} />}
-            {Contact && <ContactPage className="page" />}
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/skills" element={<SkillsPage projects={projects} />} />
+                <Route path="/projects" element={<ProjectsPage projects={projects} />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="*" element={<HomePage />} />
+            </Routes>
             <Footer 
                 dispatch={dispatch}
                 state={{Home, Skills, Projects, Contact}} />
         </div>
-    );
+    )
 }
 
 export default App;

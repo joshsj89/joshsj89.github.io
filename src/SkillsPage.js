@@ -8,9 +8,9 @@ try {
     console.error('Error:', err);
 }
 
-function SkillsPage(props) {
+function SkillsPage() {
     return (
-        <div className={`${props.className} skills-page`}>
+        <div className={'page skills-page'}>
             <div className="skills-container">
                 <h1>Skills</h1>
                 <div className="skills-row">

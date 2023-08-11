@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ACTIONS } from './App';
 import './styles.css'
 
@@ -20,9 +21,9 @@ function Footer({ dispatch, state }) {
                         </a> 
                     </li>
                     <li>
-                        <button onClick={() => dispatch({ type: ACTIONS.DISPLAY_CONTACT, payload: { state } })}>
+                        <Link to="/contact" onClick={() => dispatch({ type: ACTIONS.DISPLAY_CONTACT, payload: { state } })}>
                             <img src="images/email.png" alt="Email" />
-                        </button> 
+                        </Link> 
                     </li>
                 </ul>
             </nav>

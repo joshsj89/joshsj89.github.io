@@ -2,7 +2,7 @@ import Project from './Project';
 
 function ProjectsPage(props) {
     return (
-        <div className={`${props.className} projects-page`}>
+        <div className={'page projects-page'}>
             <h1>Projects</h1>
             <div className="project-list">
                 {props.projects.map((project, index) => {
