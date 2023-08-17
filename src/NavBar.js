@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { ACTIONS } from './App';
 import "./styles.css";
 
@@ -39,30 +38,30 @@ function NavBar({ dispatch, state }) {
     return (
         <nav className="navbar">
             <div className="links">
-                <Link
-                    className='button-link'
-                    to="/skills"
+                <button
+                    className='link-button'
+                    //href="#skills"
                     onClick={() => dispatch({ type: ACTIONS.DISPLAY_SKILLS, payload: { state } })}
                 >Skills
-                </Link>
+                </button>
             </div>
-            <Link
-                className={`header-title ${hidden ? 'hidden unclickable' : ''}`}
-                to="/"
+            <button
+                className={`header-title link-button ${hidden ? 'hidden unclickable' : ''}`}
+                //href="/"
                 onClick={() => {
                     setHidden(true);
                     dispatch({ type: ACTIONS.DISPLAY_HOME, payload: { state } })
                     }
                 }
             >Josh Kindarara
-            </Link>
+            </button>
             <div className="links">
-                <Link
-                    className='button-link'
-                    to="/projects"
+                <button
+                    className='link-button'
+                    //href="#projects"
                     onClick={() => dispatch({ type: ACTIONS.DISPLAY_PROJECTS, payload: { state } })}
                 >Projects
-                </Link>
+                </button>
             </div>
         </nav>
     );
