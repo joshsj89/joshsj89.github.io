@@ -11,7 +11,7 @@ const formatDescription = (description) => {
 function Skill({ skill }) {
     return (
         <div className="skill skills-col">
-            <span className="skill-images two-icons">
+            <span className={`skill-images ${skill.classes}`}>
                 {skill.images.map((image, index) => {
                     return <img src={image} alt={skill.alts[index]} key={index} />
                 })}
