@@ -34,6 +34,12 @@
     opacity: 0;
 }
 
+.links.active button {
+    background-color: #ddd;
+    color: black;
+    height: 70px;
+}
+
 .links button {
     float: left;
     font-size: 30px;

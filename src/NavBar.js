@@ -37,7 +37,7 @@ function NavBar({ dispatch, state }) {
 
     return (
         <nav className="navbar">
-            <div className="links">
+            <div className={`links${state.Skills ? ' active' : ''}`}>
                 <button
                     className='link-button'
                     //href="#skills"
@@ -55,7 +55,7 @@ function NavBar({ dispatch, state }) {
                 }
             >Josh Kindarara
             </button>
-            <div className="links">
+            <div className={`links${state.Projects ? ' active' : ''}`}>
                 <button
                     className='link-button'
                     //href="#projects"
