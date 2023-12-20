@@ -1,4 +1,5 @@
 import Skill from './Skill';
+import styles from './SkillsPage.module.css';
 
 let skills = [];
 try {
@@ -10,10 +11,10 @@ try {
 
 function SkillsPage() {
     return (
-        <div className={'page skills-page'}>
-            <div className="skills-container">
+        <div className={`page ${styles['skills-page']}`}>
+            <div className={styles['skills-container']}>
                 <h1>Skills</h1>
-                <div className="skills-row">
+                <div className={styles['skills-row']}>
                     {skills.map((skill) => {
                         return <Skill skill={skill} key={skill._id} />;
                     })}

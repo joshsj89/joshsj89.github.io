@@ -1,0 +1,24 @@
+.projects-page {
+    padding: 50px 100px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .projects-page {
+        padding: 30px 20px;
+        font-size: 30px;
+    }
+
+    .project-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

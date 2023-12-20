@@ -1,16 +1,18 @@
+import styles from './Project.module.css';
+
 function Project({ project, key }) {
     return (
-        <div className="project">
-            <div className="project-image">
+        <div className={styles.project}>
+            <div className={styles['project-image']}>
                 <img src={project.image} alt={project.name} />
             </div>
-            <div className="project-content">
+            <div className={styles['project-content']}>
                 <a 
-                    className="project-name"
+                    className={styles['project-name']}
                     href={project.link}
                     target="_blank" rel="noreferrer" >{project.name}</a>
-                <p className="project-description">{project.description}</p>
-                <ul className="project-tech">
+                <p className={styles['project-description']}>{project.description}</p>
+                <ul className={styles['project-tech']}>
                     {project.tech.map((tech, index) => {
                         return <li>{tech}</li>
                     })

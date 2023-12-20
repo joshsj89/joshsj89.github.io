@@ -1,0 +1,13 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* makes sure footer is at bottom of page */
+}
+
+.page {
+    margin: 30px 0px 0px 0px;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}

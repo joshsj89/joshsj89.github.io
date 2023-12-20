@@ -1,5 +1,5 @@
 import { ACTIONS } from './App';
-import './styles.css'
+import styles from './Footer.module.css';
 
 const year = new Date().getFullYear();
 
@@ -7,7 +7,7 @@ function Footer({ dispatch, state }) {
     return (
         <footer>
             <p>© {year} Josh Kindarara</p>
-            <nav className="social-media">
+            <nav className={styles['social-media']}>
                 <ul>
                     <li>
                         <a href="https://www.linkedin.com/in/joshkindarara" target="_blank" rel="noreferrer">

@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from 'react';
+import styles from './App.module.css';
 import ContactPage from './ContactPage';
 import Footer from './Footer';
 import HomePage from './HomePage';
@@ -9,7 +10,7 @@ import SkillsPage from './SkillsPage';
 let projects;
 
 try {
-    const response = await fetch('https://joshsj89-1d7a9e7057c7.herokuapp.com/api/projects/all');
+    const response = await fetch('http://localhost:5000/api/projects/all');
     projects = await response.json();
 } catch (error) {
     console.error('Error:', error);
@@ -108,14 +109,14 @@ function App() {
     }, []);
 
     return (
-        <div className="App">
+        <div className={styles['App']}>
             <NavBar 
                 dispatch={dispatch}
                 state={{Home, Skills, Projects, Contact}} />
-            {Home && <HomePage className="page" />}
-            {Skills && <SkillsPage className="page" projects={projects} />}
-            {Projects && <ProjectsPage className="page" projects={projects} />}
-            {Contact && <ContactPage className="page" />}
+            {Home && <HomePage className={styles.page} />}
+            {Skills && <SkillsPage className={styles.page} projects={projects} />}
+            {Projects && <ProjectsPage className={styles.page} projects={projects} />}
+            {Contact && <ContactPage className={styles.page} />}
             <Footer 
                 dispatch={dispatch}
                 state={{Home, Skills, Projects, Contact}} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './ResumeButton.module.css';
 
 function ResumeButton({ downloadID }) {
     const handleClick = async () => {
@@ -25,7 +26,7 @@ function ResumeButton({ downloadID }) {
 
     return (
         <button 
-            className="resume-button"
+            className={styles["resume-button"]}
             onClick={handleClick}
             >Resume</button>
     );

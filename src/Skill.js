@@ -1,3 +1,5 @@
+import styles from './Skill.module.css';
+
 const formatDescription = (description) => {
     const boldPattern = /\{(.*?)\}/g;
     const linkPattern = /\[(.*?)\]\((.*?)\)/g
@@ -10,14 +12,14 @@ const formatDescription = (description) => {
 
 function Skill({ skill }) {
     return (
-        <div className="skill skills-col">
-            <span className={`skill-images ${skill.classes}`}>
+        <div className={`${styles.skill} ${styles['skills-col']}`}>
+            <span className={`${styles['skill-images']} ${styles[skill.classes]}`}>
                 {skill.images.map((image, index) => {
                     return <img src={image} alt={skill.alts[index]} key={index} />
                 })}
             </span>
-            <h4 className="skill-name">{skill.name}</h4>
-            <p className="skill-description" dangerouslySetInnerHTML={{ __html: formatDescription(skill.description) }}></p>
+            <h4 className={styles['skill-name']}>{skill.name}</h4>
+            <p className={styles['skill-description']} dangerouslySetInnerHTML={{ __html: formatDescription(skill.description) }}></p>
         </div>
     );
 }

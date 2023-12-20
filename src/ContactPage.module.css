@@ -1,0 +1,13 @@
+.contact-page {
+    padding: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 50px;
+        margin: 50px 0;
+    }
+}

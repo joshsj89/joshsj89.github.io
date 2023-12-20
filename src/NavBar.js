@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ACTIONS } from './App';
-import "./styles.css";
+import styles from './NavBar.module.css';
 
 function NavBar({ dispatch, state }) {
     const [hidden, setHidden] = useState(true);
@@ -36,17 +36,17 @@ function NavBar({ dispatch, state }) {
     });
 
     return (
-        <nav className="navbar">
-            <div className={`links${state.Skills ? ' active' : ''}`}>
+        <nav className={styles.navbar}>
+            <div className={`${styles.links} ${state.Skills ? styles.active : ''}`}>
                 <button
-                    className='link-button'
+                    className={styles['link-button']}
                     //href="#skills"
                     onClick={() => dispatch({ type: ACTIONS.DISPLAY_SKILLS, payload: { state } })}
                 >Skills
                 </button>
             </div>
             <button
-                className={`header-title link-button ${hidden ? 'hidden unclickable' : ''}`}
+                className={`${styles['header-title']} ${styles['link-button']} ${hidden ? `${styles.hidden} ${styles.unclickable}` : ''}`}
                 //href="/"
                 onClick={() => {
                     setHidden(true);
@@ -55,9 +55,9 @@ function NavBar({ dispatch, state }) {
                 }
             >Josh Kindarara
             </button>
-            <div className={`links${state.Projects ? ' active' : ''}`}>
+            <div className={`${styles.links} ${state.Projects ? styles.active : ''}`}>
                 <button
-                    className='link-button'
+                    className={styles['link-button']}
                     //href="#projects"
                     onClick={() => dispatch({ type: ACTIONS.DISPLAY_PROJECTS, payload: { state } })}
                 >Projects

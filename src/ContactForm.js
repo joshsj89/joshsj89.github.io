@@ -1,4 +1,4 @@
-import './styles.css';
+import styles from './ContactForm.module.css';
 import ContactSuccessModal from './ContactSuccessModal';
 import { useState } from 'react';
 
@@ -49,7 +49,7 @@ function ContactForm() {
                 action="https://joshsj89-1d7a9e7057c7.herokuapp.com/api/contact" 
                 method="POST" >
                 <fieldset id="contact-form-inputs" >
-                    <div className="form-group">
+                    <div className={styles['form-group']}>
                         <label htmlFor="full-name">Name</label>
                         <input 
                             type="text" 
@@ -58,7 +58,7 @@ function ContactForm() {
                             placeholder="John Doe"
                             required />
                     </div>
-                    <div className="form-group">
+                    <div className={styles['form-group']}>
                         <label htmlFor="email-address">E-mail</label>
                         <input
                             type="email"
@@ -67,7 +67,7 @@ function ContactForm() {
                             placeholder="email@domain.tld"
                             required />
                     </div>
-                    <div className="form-group">
+                    <div className={styles['form-group']}>
                         <label htmlFor="message">Message</label>
                         <textarea
                             rows="5"

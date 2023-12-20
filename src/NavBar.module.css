@@ -1,0 +1,78 @@
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10; /* makes sure navbar is on top of everything else */
+}
+
+.header-title {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none; /* removes underline */
+    transition: 0.3s;
+}
+
+.header-title.hidden {
+    opacity: 0;
+}
+
+.links.active button {
+    background-color: #ddd;
+    color: black;
+    height: 70px;
+}
+
+.links button {
+    float: left;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.links button:hover {
+    background-color: #ddd;
+    color: black;
+    height: 70px;
+}
+
+.link-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.unclickable {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+
+    .links button {
+        font-size: 15px;
+    }
+}
