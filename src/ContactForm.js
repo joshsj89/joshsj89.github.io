@@ -48,7 +48,7 @@ function ContactForm() {
                 acceptCharset='UTF-8'
                 action="https://joshsj89-1d7a9e7057c7.herokuapp.com/api/contact" 
                 method="POST" >
-                <fieldset id="contact-form-inputs" >
+                <fieldset id={styles['contact-form-inputs']} >
                     <div className={styles['form-group']}>
                         <label htmlFor="full-name">Name</label>
                         <input 
@@ -84,7 +84,7 @@ function ContactForm() {
                         value="Contact Form Submission" />
                 </fieldset>
                 <input
-                    id="submit-button"
+                    id={styles['submit-button']}
                     type="submit"
                     value="Submit" />
             </form>
