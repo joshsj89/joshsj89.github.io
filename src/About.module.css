@@ -8,6 +8,16 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 0px 100px;
+    gap: 100px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+.info-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 .info-box {
@@ -17,8 +27,17 @@
     justify-content: center;
     width: 100%;
     padding: 1rem;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.info-box-header {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.info-text {
+    font-size: 1.5rem;
+    font-weight: 500;
     margin-bottom: 1rem;
 }
