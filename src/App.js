@@ -10,7 +10,7 @@ import SkillsPage from './SkillsPage';
 let projects;
 
 try {
-    const response = await fetch('http://localhost:5000/api/projects/all');
+    const response = await fetch('https://joshsj89-1d7a9e7057c7.herokuapp.com/api/projects/all');
     projects = await response.json();
 } catch (error) {
     console.error('Error:', error);
