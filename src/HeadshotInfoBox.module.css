@@ -31,3 +31,28 @@
     font-weight: 500;
     margin-bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+    .headshot-info-box {
+        flex-direction: column;
+        padding: 0px 0px;
+        gap: 0px;
+    }
+
+    .info-box {
+        padding: 0 0 5 0;
+        margin-bottom: 0px;
+    }
+
+    .info-box-header {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+
+    .info-text {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 0px;
+    }
+}
