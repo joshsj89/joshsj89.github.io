@@ -5,13 +5,13 @@ export const infoTexts = {
     },
     "Photography": {
         "title": "Photography",
-        "text": "I love photography and own a Canon EOS Rebel T3i. I enjoy taking pictures of nautre and also of people. I have a photography Instagram account where I post my favorite pictures that I take."
+        "text": "I love photography and own a Canon EOS Rebel T3i. I enjoy taking pictures of nature and also of people. I have a photography Instagram account where I post my favorite pictures that I take."
     },
     "Jazz": {
         "title": "Jazz",
-        "text": "I love jazz music. I play piano and have been learning jazz piano. I really like stride piano. I also have been playing the alto saxophone since 5th grade. I am currentl in SCU's Pep Band, performing at sports games and other campus events. Check out my jazz Spotify playlists!"
+        "text": "I love jazz! I play piano and have been learning jazz piano, focusing on learning music theory. I really like stride piano. I also have been playing alto saxophone since 5th grade. I am currently in SCU's Pep Band, performing at sports games and other campus events. Check out my jazz Spotify playlists!"
     },
     "Football": {
         "title": "Football⚽",
-        "text": "I love football, and I mean real football. I am a huge fan of Chelsea and FC Barcelona. I played club soccer for 8 years and now just play intramural for fun. I've made many connections in both the men's and women's game and, in the future, I hope to use my skills to help grow the game in the United States."}
+        "text": "I love football, and I mean real football! I am a huge fan of Chelsea and FC Barcelona. I played club soccer for 8 years and now just play intramural for fun. I've made many connections in both the men's and women's game and, in the future, I hope to use my skills to help grow the game in the United States."}
 };
