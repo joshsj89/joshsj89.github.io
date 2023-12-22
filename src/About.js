@@ -1,5 +1,6 @@
 import HeadshotInfoBox from './HeadshotInfoBox';
 import { infoTexts } from './Constants/aboutMe';
+import InstagramEmbedder from './InstagramEmbedder';
 import ResumeButton from './ResumeButton';
 import SpotifyEmbedder from './SpotifyEmbedder';
 import styles from './About.module.css';
@@ -24,6 +25,7 @@ function About() {
                     title={infoTexts['Jazz'].title} 
                 />
                 <HeadshotInfoBox 
+                    comp={<InstagramEmbedder account="kinders.photography" />}
                     num="3" 
                     side="left" 
                     text={infoTexts['Photography'].text} 
