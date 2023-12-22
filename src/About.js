@@ -25,7 +25,7 @@ function About() {
                     title={infoTexts['Jazz'].title} 
                 />
                 <HeadshotInfoBox 
-                    comp={<InstagramEmbedder account="kinders.photography" />}
+                    comp={<InstagramEmbedder account="kinders.photography" height="215" />}
                     num="3" 
                     side="left" 
                     text={infoTexts['Photography'].text} 
