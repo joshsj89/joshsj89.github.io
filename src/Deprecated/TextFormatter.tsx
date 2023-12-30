@@ -1,5 +1,5 @@
-function TextFormatter({ description }) {
-    const format = () => {
+function TextFormatter({ description }: { description: string }) {
+    const format = (): (string | JSX.Element)[] => {
         const words = description.split(' ');
 
         return words.map((word) => {

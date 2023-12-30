@@ -6,37 +6,36 @@ function ContactForm() {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [isModalSuccess, setIsModalSuccess] = useState(false);
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault(); 
         
-        const formData = new FormData(e.target);
-
-        let response;
+        const formData:any = new FormData(e.currentTarget); // temporarary type annotation
+        
         try {
-            response = await fetch(e.target.action, {
-                method: e.target.method,
+            const response = await fetch(e.currentTarget.action, {
+                method: e.currentTarget.method,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
                 body: new URLSearchParams(formData).toString()
             });
+
+            if (response.status === 200) {
+                setIsModalVisible(true);
+                setIsModalSuccess(true);
+                e.currentTarget.reset();
+            } else {
+                setIsModalVisible(true);
+                setIsModalSuccess(false);
+            }
+    
+            setTimeout(() => {
+                setIsModalVisible(false);
+            }, 3000);
         } catch (error) {
             console.log(error);
             alert('Error sending message');
         }
-
-        if (response.status === 200) {
-            setIsModalVisible(true);
-            setIsModalSuccess(true);
-            e.target.reset();
-        } else {
-            setIsModalVisible(true);
-            setIsModalSuccess(false);
-        }
-
-        setTimeout(() => {
-            setIsModalVisible(false);
-        }, 3000)
     }
 
     return (
@@ -70,7 +69,7 @@ function ContactForm() {
                     <div className={styles['form-group']}>
                         <label htmlFor="message">Message</label>
                         <textarea
-                            rows="5"
+                            rows={5}
                             name="message"
                             id="message"
                             placeholder="Your message here..."
@@ -88,7 +87,7 @@ function ContactForm() {
                     type="submit"
                     value="Submit" />
             </form>
-            {isModalVisible && (<ContactSuccessModal visible={isModalVisible} success={isModalSuccess} />)}
+            {isModalVisible && (<ContactSuccessModal success={isModalSuccess} />)}
         </div>
     );
 }

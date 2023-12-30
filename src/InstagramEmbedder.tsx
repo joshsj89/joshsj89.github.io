@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+import InstagramEmbedderInterface from "./Interfaces/InstagramEmbedderInterface";
 
-function InstagramEmbedder({ account, height }) {
+function InstagramEmbedder({ account, height }: InstagramEmbedderInterface) {
     useEffect(() => {
         // Add Instagram embed script to the page
         const script = document.createElement('script');

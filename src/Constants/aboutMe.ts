@@ -1,4 +1,11 @@
-export const infoTexts = {
+interface InfoText {
+    [name: string]: {
+        title: string | string[];
+        text: string
+    };
+}
+
+export const infoTexts: InfoText = {
     "Programming": {
         "title": ["Software Engineer", "Full-Stack Developer"],
         "text": "Hey, I'm Josh! I am an aspiring software engineer and full-stack developer who loves solving problems and learning new languages, frameworks, and technologies. I am currently a junior at Santa Clara University pursuing a Bachelor of Science in Computer Science and Engineering and a minor in Mathematics."

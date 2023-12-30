@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react' 
+import { useState, useEffect } from 'react';
 import { ACTIONS } from './App';
 import styles from './NavBar.module.css';
 
@@ -9,7 +10,7 @@ function NavBar({ dispatch, state }) {
     useEffect(() => {
         if (state.Home) {
             const handleScroll = () => {
-                const name = document.querySelector(".name");
+                const name: HTMLHeadingElement | null = document.querySelector(".name");
                 if (name == null) {
                     return;
                 }

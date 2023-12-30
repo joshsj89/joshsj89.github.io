@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "target": "es2017",
+        "module": "CommonJS",
+        "strictNullChecks": true,
+        "sourceMap": true,
+        "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    },
+    "include": ["./src/**/*.ts", "./src/**/*.tsx", "./typings.d.ts"],
+    "exclude": ["node_modules"]
+}
+  

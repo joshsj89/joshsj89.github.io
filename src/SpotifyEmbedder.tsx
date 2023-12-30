@@ -1,4 +1,6 @@
-function SpotifyEmbedder({ size, sizePercentage, type, uri }) {
+import SpotifyEmbedderInterface from "./Interfaces/SpotifyEmbedderInterface";
+
+function SpotifyEmbedder({ size, sizePercentage, type, uri }: SpotifyEmbedderInterface) {
     return (
         <iframe 
             style={{ borderRadius: 12 }}
@@ -6,7 +8,7 @@ function SpotifyEmbedder({ size, sizePercentage, type, uri }) {
             width={`${sizePercentage}%`}
             height={size === 'Compact' ? '152' : '352'}
             frameBorder="0" 
-            allowFullScreen=""
+            allowFullScreen={true}
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"
             >

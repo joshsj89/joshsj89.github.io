@@ -1,6 +1,7 @@
+import ProjectInterface from './Interfaces/ProjectInterface';
 import styles from './Project.module.css';
 
-function Project({ project, key }) {
+function Project({ project, key }: { project: ProjectInterface, key?: string }) {
     return (
         <div className={styles.project}>
             <div className={styles['project-image']}>
@@ -13,7 +14,7 @@ function Project({ project, key }) {
                     target="_blank" rel="noreferrer" >{project.name}</a>
                 <p className={styles['project-description']}>{project.description}</p>
                 <ul className={styles['project-tech']}>
-                    {project.tech.map((tech, index) => {
+                    {project.tech.map((tech) => {
                         return <li>{tech}</li>
                     })
                     }

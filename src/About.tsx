@@ -18,14 +18,14 @@ function About() {
                     title={infoTexts['Programming'].title} 
                 />
                 <HeadshotInfoBox 
-                    comp={<SpotifyEmbedder size="Compact" sizePercentage="100" type="playlist" uri="1GSNGAu8phHtkUNyHgGyf8" />}
+                    comp={<SpotifyEmbedder size="Compact" sizePercentage={100} type="playlist" uri="1GSNGAu8phHtkUNyHgGyf8" />}
                     num="2" 
                     side="right" 
                     text={infoTexts['Jazz'].text} 
                     title={infoTexts['Jazz'].title} 
                 />
                 <HeadshotInfoBox 
-                    comp={<InstagramEmbedder account="kinders.photography" height="215" />}
+                    comp={<InstagramEmbedder account="kinders.photography" height={215} />}
                     num="3" 
                     side="left" 
                     text={infoTexts['Photography'].text} 

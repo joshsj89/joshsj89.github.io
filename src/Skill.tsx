@@ -1,3 +1,4 @@
+import SkillInterface from './Interfaces/SkillInterface';
 import styles from './Skill.module.css';
 
 const formatDescription = (description) => {
@@ -10,10 +11,18 @@ const formatDescription = (description) => {
     return finalDescription;
 }
 
-function Skill({ skill }) {
+function Skill({ skill }: {skill: SkillInterface}) {
+    let skillClasses: string = '';
+
+    if (skill.classes) {
+        skill.classes.forEach((skillClass) => {
+            skillClasses += `${styles[skillClass]} `;
+        });
+    }
+
     return (
         <div className={`${styles.skill} ${styles['skills-col']}`}>
-            <span className={`${styles['skill-images']} ${styles[skill.classes]}`}>
+            <span className={`${styles['skill-images']} ${skillClasses}`}>
                 {skill.images.map((image, index) => {
                     return <img src={image} alt={skill.alts[index]} key={index} />
                 })}

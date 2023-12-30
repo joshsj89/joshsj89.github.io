@@ -1,9 +1,10 @@
 import { ACTIONS } from './App';
+import ScreenState from './Interfaces/ScreenState';
 import styles from './Footer.module.css';
 
 const year = new Date().getFullYear();
 
-function Footer({ dispatch, state }) {
+function Footer({ dispatch, state }: { dispatch: React.Dispatch<any>, state: ScreenState }) {
     return (
         <footer>
             <p>© {year} Josh Kindarara</p>

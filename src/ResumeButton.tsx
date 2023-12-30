@@ -1,17 +1,17 @@
-import React from 'react'
+import PDFInterface from './Interfaces/PDFInterface';
 import styles from './ResumeButton.module.css';
 
-function ResumeButton({ downloadID }) {
+function ResumeButton({ downloadID }: { downloadID: string }) {
     const handleClick = async () => {
         try {
             const response = await fetch(`https://joshsj89-1d7a9e7057c7.herokuapp.com/api/pdf/download/${downloadID}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            const resume = await response.json();
+            const resume: PDFInterface = await response.json();
         
             // YYYY-MM-DDTHH:MM:SS.MSSZ -> YYYY_MM_DD
-            const date = resume.createdAt.slice(0, 10).replace(/-/g, '_');
+            const date = resume.createdAt.toISOString().slice(0, 10).replace(/-/g, '_');
 
             const blob = new Blob([new Uint8Array(resume.data.data)], {type: 'application/pdf'});
             const url = window.URL.createObjectURL(blob);

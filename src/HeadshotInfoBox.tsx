@@ -2,7 +2,7 @@ import Headshot from './Headshot';
 import styles from './HeadshotInfoBox.module.css';
 import Typewriter from 'typewriter-effect';
 
-function HeadshotInfoBox({ comp, num, side, text, title }) {
+function HeadshotInfoBox({ comp, num, side, text, title }: { comp?: JSX.Element, num: string, side: "left" | "right", text: string, title: string | string[] }) {
     return (
         <div className={styles["headshot-info-box"]}>
             {side === "left" && <Headshot num={num} />}
@@ -16,7 +16,7 @@ function HeadshotInfoBox({ comp, num, side, text, title }) {
                                 loop: true,
                                 delay: 50,
                                 deleteSpeed: 50,
-                                pauseFor: 1000,
+                                // pauseFor: 1000,
                             }}
                         />
                     }
