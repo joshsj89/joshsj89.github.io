@@ -9,9 +9,15 @@ function ResumeButton({ downloadID }: { downloadID: string }) {
                 throw new Error('Network response was not ok');
             }
             const resume: PDFInterface = await response.json();
+
+            let date: string = '';
         
             // YYYY-MM-DDTHH:MM:SS.MSSZ -> YYYY_MM_DD
-            const date = resume.createdAt.toISOString().slice(0, 10).replace(/-/g, '_');
+            if (typeof resume.createdAt === 'string') {
+                date = resume.createdAt.slice(0, 10).replace(/-/g, '_');
+            } else if (resume.createdAt instanceof Date) {
+                date = resume.createdAt.toISOString().slice(0, 10).replace(/-/g, '_');
+            }
 
             const blob = new Blob([new Uint8Array(resume.data.data)], {type: 'application/pdf'});
             const url = window.URL.createObjectURL(blob);

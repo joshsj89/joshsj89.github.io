@@ -8,6 +8,6 @@ export default interface PDFInterface {
     title: string;
     data: PDFDataInterface;
     pdfType: string;
-    createdAt: Date;
+    createdAt: Date | string;
     pdfPath?: string;
 }
