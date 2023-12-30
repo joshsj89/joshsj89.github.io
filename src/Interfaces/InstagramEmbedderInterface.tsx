@@ -3,10 +3,13 @@ export default interface InstagramEmbedderInterface {
     height: number;
 }
 
+/** Global Window Interface */
 declare global {
     interface Window {
+        /** Instagram Embedder */
         instgrm: {
             Embeds: {
+                /** @function Manually initialize the HTML Instagram embeds */
                 process: () => void;
             };
         }
