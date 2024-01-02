@@ -24,10 +24,10 @@ function Skill({ skill }: {skill: SkillInterface}) {
         <div className={`${styles.skill} ${styles['skills-col']}`}>
             <span className={`${styles['skill-images']} ${skillClasses}`}>
                 {skill.images.map((image, index) => {
-                    return <img src={image} alt={skill.alts[index]} key={index} />
+                    return <img src={image} alt={skill.alts[index]} title={skill.alts[index]} key={index} />
                 })}
             </span>
-            <h4 className={styles['skill-name']}>{skill.name}</h4>
+            <h4 className={styles['skill-name']} title={skill.name}>{skill.name}</h4>
             <p className={styles['skill-description']} dangerouslySetInnerHTML={{ __html: formatDescription(skill.description) }}></p>
         </div>
     );
