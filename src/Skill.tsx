@@ -1,7 +1,7 @@
 import SkillInterface from './Interfaces/SkillInterface';
 import styles from './Skill.module.css';
 
-const formatDescription = (description) => {
+const formatDescription = (description: string) => {
     const boldPattern = /\{(.*?)\}/g;
     const linkPattern = /\[(.*?)\]\((.*?)\)/g
 
