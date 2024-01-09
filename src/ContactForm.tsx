@@ -1,29 +1,33 @@
 import styles from './ContactForm.module.css';
 import ContactSuccessModal from './ContactSuccessModal';
-import { useState } from 'react';
+import { BaseSyntheticEvent, useState } from 'react';
 
 function ContactForm() {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [isModalSuccess, setIsModalSuccess] = useState(false);
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: BaseSyntheticEvent) => {
         e.preventDefault(); 
         
-        const formData:any = new FormData(e.currentTarget); // temporarary type annotation
+        const formData = new FormData(e.target);
+        let params: string[][] = [];
+        for (const pair of formData.entries()) {
+            params.push([pair[0], pair[1].toString()]);
+        }
         
         try {
-            const response = await fetch(e.currentTarget.action, {
-                method: e.currentTarget.method,
+            const response = await fetch(e.target.action, {
+                method: e.target.method,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: new URLSearchParams(formData).toString()
+                body: new URLSearchParams(params).toString()
             });
 
             if (response.status === 200) {
                 setIsModalVisible(true);
                 setIsModalSuccess(true);
-                e.currentTarget.reset();
+                e.target.reset();
             } else {
                 setIsModalVisible(true);
                 setIsModalSuccess(false);
