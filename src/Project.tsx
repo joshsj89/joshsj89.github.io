@@ -10,7 +10,7 @@ function Project({ project, key }: { project: ProjectInterface, key?: string }) 
             <div className={styles['project-content']}>
                 <a 
                     className={styles['project-name']}
-                    href={project.link}
+                    href={project.link !== '' ? project.link : undefined}
                     target="_blank" rel="noreferrer" >{project.name}</a>
                 <p className={styles['project-description']}>{project.description}</p>
                 <ul className={styles['project-tech']}>
