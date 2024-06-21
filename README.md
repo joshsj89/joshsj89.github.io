@@ -1,12 +1,10 @@
 # Josh Kindarara's Personal Portfolio Website
 
-Welcome to my portfolio! This project showcases my work, skills, and projects. It is built with React and TypeScript and is published using GitHub Pages. The backend services are hosted separately on [my custom API](https://joshsj89-1d7a9e7057c7.herokuapp.com/).
-
-## Link: [https://joshsj89.github.io](https://joshsj89.github.io)
+Welcome to my portfolio! This project showcases my work, skills, and projects. It is built with React and TypeScript and is published using GitHub Pages. The backend services are hosted separately on [my custom API](https://joshsj89-1d7a9e7057c7.herokuapp.com/api).
 
 ## Live Site
 
-You can view the live version of my portfolio [here](https://joshsj89-1d7a9e7057c7.herokuapp.com/).
+You can view the live version of my portfolio [here](https://joshsj89.github.io).
 
 ## Portfolio Features
 
