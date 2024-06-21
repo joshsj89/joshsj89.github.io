@@ -103,7 +103,7 @@ function reducer(state: ScreenState, { type }) {
 }
 
 function App() {    
-    const [{ Home, Skills, Projects, Contact }, dispatch]: any = useReducer(reducer, { // temporarary type annotation
+    const [{ Home, Skills, Projects, Contact }, dispatch]: any = useReducer(reducer, { // temporary type annotation
         Home: true, 
         Skills: false, 
         Projects: false,
