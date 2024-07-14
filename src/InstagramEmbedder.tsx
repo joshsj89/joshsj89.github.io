@@ -43,6 +43,7 @@ function InstagramEmbedder({ account, height }: InstagramEmbedderInterface) {
                         width: '100%',
                     }}
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                         <div
@@ -258,6 +259,7 @@ function InstagramEmbedder({ account, height }: InstagramEmbedderInterface) {
                             lineHeight: '17px',
                         }}
                         target="_blank"
+                        rel="noopener noreferrer"
                     ></a> (@<a
                         href={`https://www.instagram.com/${account}/?utm_source=ig_embed&utm_campaign=loading`}
                         style={{
@@ -268,7 +270,9 @@ function InstagramEmbedder({ account, height }: InstagramEmbedderInterface) {
                             fontWeight: 'normal',
                             lineHeight: '17px',
                         }}
-                        target="_blank">{account}</a>) • Instagram photos and videos</p>
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >{account}</a>) • Instagram photos and videos</p>
             </div>
         </blockquote>
     );

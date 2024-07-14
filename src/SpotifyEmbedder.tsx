@@ -11,6 +11,7 @@ function SpotifyEmbedder({ size, sizePercentage, type, uri }: SpotifyEmbedderInt
             allowFullScreen={true}
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy"
+            title="Spotify Embedder"
             >
         </iframe>
     )

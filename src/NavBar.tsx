@@ -33,8 +33,7 @@ function NavBar({ dispatch, state }) {
         } else {
             setHidden(false);
         }
-
-    });
+    }, [state.Home]);
 
     return (
         <nav className={styles.navbar}>
