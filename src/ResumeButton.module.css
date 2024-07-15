@@ -1,4 +1,5 @@
 .resume-button {
+    position: relative; /* Ensure the button can position its children */
     background-color: transparent;
     border: 3px solid black;
     border-radius: 10px;
@@ -6,10 +7,22 @@
     margin-top: 20px;
     font-size: 20px;
     cursor: pointer;
+    overflow: hidden; /* Hide overflow to keep the progress bar within bounds */
     transition: 0.3s;
+    display: inline-block; 
 }
 
 .resume-button:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+.progress-bar-fill {
+    position: absolute; /* Positioning within the button */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: blue;
+    transition: width 0.3s ease;
 }
