@@ -76,7 +76,7 @@
 }
 
 /* Media Query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
     .skills-col {
         flex: 0 0 80%;
         max-width: 80%;
