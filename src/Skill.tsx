@@ -16,7 +16,9 @@ function Skill({ skill }: {skill: SkillInterface}) {
 
     if (skill.classes) {
         skill.classes.forEach((skillClass) => {
-            skillClasses += `${styles[skillClass]} `;
+            if (styles[skillClass]) {
+                skillClasses += `${styles[skillClass]} `;
+            }
         });
     }
 

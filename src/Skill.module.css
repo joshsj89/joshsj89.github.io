@@ -19,27 +19,31 @@
 
 .skill-images {
     display: flex;
-    flex-direction: column; /* find out if necessary */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     margin-top: 20px;
 }
 
-.skill-images.two-icons {
-    flex-direction: row;
-}
-
 .skill-images img {
     width: 150px;
-    height: 150px;
+    height: auto;
     margin: 5px;
     transition: 0.3s;
 }
 
+.skill-images.two-icons {
+    flex-direction: row;
+}
+
+.skill-images.two-icons img {
+    width: 150px;
+    height: 150px;
+}
+
 .skill-images.wide-logo img {
     width: 300px;
-    height: 150px;
 }
 
 .skill-images img:hover {
