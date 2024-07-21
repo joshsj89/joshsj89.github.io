@@ -75,8 +75,35 @@
     transition: 0.3s;
 }
 
+/* Media Query for medium screens */
+@media (768px <= width <= 1300px) {
+    .skills-col { /* 2 columns */
+        flex: 0 0 40%;
+        max-width: 40%;
+        
+    }
+
+    .skill-images img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .skill-images.wide-logo img {
+        width: 300px;
+        height: 150px;
+    }
+
+    .skill-name {
+        font-size: 30px;
+    }
+
+    .skill-description {
+        font-size: 20px;
+    }
+}
+
 /* Media Query for smaller screens */
-@media (max-width: 1300px) {
+@media (max-width: 768px) {
     .skills-col {
         flex: 0 0 80%;
         max-width: 80%;
