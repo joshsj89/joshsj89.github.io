@@ -57,9 +57,9 @@ function ResumeButton({ downloadID }: { downloadID: string }) {
                 date = resume.createdAt.toISOString().slice(0, 10).replace(/-/g, '_');
             }
 
-            // const blob = new Blob([new Uint8Array(resume.data.data)], {type: 'application/pdf'});
-            const newResponse = new Response(stream);
-            const blob = await newResponse.blob();
+            const blob = new Blob([new Uint8Array(resume.data.data)], {type: 'application/pdf'});
+            // const newResponse = new Response(stream);
+            // const blob = await newResponse.blob();
             const url = window.URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
