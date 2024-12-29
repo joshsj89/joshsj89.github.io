@@ -21,8 +21,8 @@ function SkillsPage({ skills }: { skills: SkillInterface[] }) {
     return (
         <CategoryContext.Provider value={{ selectedCategory, setSelectedCategory }}>
             <div className={`page ${styles['skills-page']}`}>
+                <h1>Skills</h1>
                 <div className={styles['skills-container']}>
-                    <h1>Skills</h1>
                     <div className={styles.categories}>
                         <SkillCategoryButton name="All"/>
                         {categories.map((category, index) => (

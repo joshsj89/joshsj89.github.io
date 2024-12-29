@@ -3,11 +3,28 @@
     padding: 10px 15px;
     cursor: pointer;
     border: none;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    font-size: 14px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    color: #ffffff;
+    border-radius: 25px; /* Rounded button for modern look */
+    font-size: 16px; /* Slightly larger font size */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: all 0.3s ease; /* Smooth animation for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.category-btn:hover {
-    background-color: #e0e0e0;
+.category-btn:hover:not(.selected) {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reverse gradient */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+.category-btn:active { /* Button press effect */
+    transform: scale(0.95); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+}
+
+.selected {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Highlight selected buttons */
+    color: #ffffff;
+    box-shadow: 0 6px 12px rgba(255, 126, 95, 0.3); /* Stronger glow for selected buttons */
 }
