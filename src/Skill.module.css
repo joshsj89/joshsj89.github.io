@@ -11,11 +11,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.skill-card img {
-    max-width: 60px;
-    margin-bottom: 10px;
-}
-
 .skill-card h4 {
     margin: 0;
     font-size: 16px;
@@ -31,12 +26,12 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    height: 2.5em;
 }
 
 .skill-images img {
-    width: 150px;
-    height: auto;
+    width: 2em;
     margin: 5px;
     transition: 0.3s;
 }
@@ -46,12 +41,12 @@
 }
 
 .skill-images.two-icons img {
-    width: 150px;
-    height: 150px;
+    width: 2em;
 }
 
 .skill-images.wide-logo img {
-    width: 300px;
+    width: 4.5em;
+    /* max-height: 2.5em; */
 }
 
 .skill-images img:hover {
