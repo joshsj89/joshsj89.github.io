@@ -5,19 +5,28 @@
 }
 
 .skills-container {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     list-style: none;
-    padding: 0;
+    padding: 0; */
+    text-align: center;
+    margin: 0 6em;
 }
 
-.skills-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.categories {
+    margin-bottom: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    border: 0.1px solid rgb(133, 76, 230);
+    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    border-radius: 16px;
+    padding: 1em;
 }
 
 /* Media Query for smaller screens */

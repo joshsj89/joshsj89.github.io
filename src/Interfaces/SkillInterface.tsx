@@ -12,8 +12,10 @@ export default interface SkillInterface {
     description: string;
     /** The images of the skill */
     images: string[];
-    /** The alternate textx of the skill */
+    /** The alternate texts of the skill */
     alts: string[];
     /** The classes of the skill */
     classes: string[];
+    /** The categories of the skill */
+    categories: string[];
 };

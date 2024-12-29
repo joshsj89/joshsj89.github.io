@@ -23,14 +23,14 @@ function Skill({ skill }: {skill: SkillInterface}) {
     }
 
     return (
-        <div className={`${styles.skill} ${styles['skills-col']}`}>
+        <div className={styles['skill-card']}>
             <span className={`${styles['skill-images']} ${skillClasses}`}>
-                {skill.images.map((image, index) => {
-                    return <img src={image} alt={skill.alts[index]} title={skill.alts[index]} key={index} />
-                })}
+                {skill.images.map((image, index) => (
+                    <img src={image} alt={skill.alts[index]} title={skill.alts[index]} key={index} />
+                ))}
             </span>
             <h4 className={styles['skill-name']} title={skill.name}>{skill.name}</h4>
-            <p className={styles['skill-description']} dangerouslySetInnerHTML={{ __html: formatDescription(skill.description) }}></p>
+            {/* <p className={styles['skill-description']} dangerouslySetInnerHTML={{ __html: formatDescription(skill.description) }}></p> */}
         </div>
     );
 }
