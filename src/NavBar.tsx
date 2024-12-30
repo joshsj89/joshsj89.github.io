@@ -1,24 +1,27 @@
-import * as React from 'react' 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ACTIONS } from './App';
 import styles from './NavBar.module.css';
+import { useName } from './Contexts/NameContext';
 
 function NavBar({ dispatch, state }) {
+    const nameRef = useName();
+    const navBarRef = useRef<HTMLDivElement | null>(null);
     const [hidden, setHidden] = useState(true);
 
     // Directly manipulating DOM because it's common for the scroll event
     useEffect(() => {
         if (state.Home) {
             const handleScroll = () => {
-                const name: HTMLHeadingElement | null = document.querySelector(".name");
-                if (name == null) {
-                    return;
-                }
+                if (nameRef?.current == null) return;
 
-                const nameMargin = parseFloat(window.getComputedStyle(name).marginTop); // Get the margin of the header title
-                const nameHeight = name.offsetHeight + nameMargin; // Get the height of the header title
+                const nameMargin = parseFloat(window.getComputedStyle(nameRef.current).marginTop); // Get the margin of the header title
+                const nameHeight = nameRef.current.offsetHeight + nameMargin; // Get the height of the header title
 
-                if (window.scrollY < nameHeight) { // If the user is at the top of the page, hide the header title
+                const navBarHeight = navBarRef.current?.offsetHeight; // Get the height of the navbar
+
+                if (navBarHeight == null) return;
+
+                if (window.scrollY < nameHeight - navBarHeight) { // If the user is at the top of the page, hide the header title
                     setHidden(true);
                 } else { // If the user is not at the top of the page, show the header title
                     setHidden(false);
@@ -33,10 +36,10 @@ function NavBar({ dispatch, state }) {
         } else {
             setHidden(false);
         }
-    }, [state.Home]);
+    }, [state.Home, nameRef]);
 
     return (
-        <nav className={styles.navbar}>
+        <nav className={styles.navbar} ref={navBarRef}>
             <div className={`${styles.links} ${state.Skills ? styles.active : ''}`}>
                 <button
                     className={styles['link-button']}

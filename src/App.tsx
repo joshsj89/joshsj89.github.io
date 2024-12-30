@@ -10,6 +10,7 @@ import ProjectsPage from './ProjectsPage';
 import ScreenState from './Interfaces/ScreenState';
 import SkillInterface from './Interfaces/SkillInterface';
 import SkillsPage from './SkillsPage';
+import { NameProvider } from './Contexts/NameContext';
 
 let projects: ProjectInterface[];
 let skills: SkillInterface[];
@@ -140,16 +141,19 @@ function App() {
 
     return (
         <div className={styles['App']}>
-            <NavBar 
-                dispatch={dispatch}
-                state={{Home, Skills, Projects, Contact}} />
-            {Home && <HomePage />}
-            {Skills && <SkillsPage skills={skills} />}
-            {Projects && <ProjectsPage projects={projects} />}
-            {Contact && <ContactPage />}
-            <Footer 
-                dispatch={dispatch}
-                state={{Home, Skills, Projects, Contact}} />
+            <NameProvider>
+                <NavBar 
+                    dispatch={dispatch}
+                    state={{Home, Skills, Projects, Contact}} />
+                {Home && <HomePage />}
+                {Skills && <SkillsPage skills={skills} />}
+                {Projects && <ProjectsPage projects={projects} />}
+                {Contact && <ContactPage />}
+                <Footer 
+                    dispatch={dispatch}
+                    state={{Home, Skills, Projects, Contact}} 
+                />
+            </NameProvider>
         </div>
     );
 }
