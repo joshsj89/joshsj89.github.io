@@ -12,7 +12,7 @@
     list-style: none;
     padding: 0; */
     text-align: center;
-    margin: 0 6em;
+    /* margin: 0 6em; */
 }
 
 .categories {
@@ -27,6 +27,7 @@
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
     border-radius: 16px;
     padding: 1em;
+    min-width: 175px;
 }
 
 /* Media Query for smaller screens */
