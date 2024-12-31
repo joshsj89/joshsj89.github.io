@@ -1,5 +1,6 @@
 .skills-page {
-    padding: 50px;
+    padding: 30px 100px;
+    margin-top: 40px;
     text-align: center;
     font-size: 35px;
 }
@@ -34,8 +35,12 @@
 @media (max-width: 768px) {
     .skills-page {
         padding: 30px;
-        margin-top: 30px;
+        margin-top: 40px;
         text-align: center;
         font-size: 30px;
+    }
+
+    h1 {
+        font-size: 1.3em;
     }
 }

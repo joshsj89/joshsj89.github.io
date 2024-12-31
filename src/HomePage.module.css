@@ -1,6 +1,6 @@
 .home-page {
-    margin-bottom: 50px;
-    padding: 50px;
+    padding: 30px;
+    margin-top: 40px;
     text-align: center;
     font-size: 35px;
     display: flex;
@@ -19,4 +19,9 @@
     flex-direction: column;
     gap: 100px;
 }
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 1.3em;
+    }
 }
