@@ -8,3 +8,15 @@
     justify-content: center;
     align-items: center;
 }
+
+.name {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.info-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+}
