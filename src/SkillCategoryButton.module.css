@@ -5,6 +5,7 @@
     border: none;
     background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
     color: #ffffff;
+    text-wrap: nowrap;
     border-radius: 25px; /* Rounded button for modern look */
     font-size: 16px; /* Slightly larger font size */
     font-weight: bold; /* Bold text for emphasis */
