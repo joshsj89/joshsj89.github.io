@@ -14,14 +14,12 @@ function NavBar({ dispatch, state }) {
             const handleScroll = () => {
                 if (nameRef?.current == null) return;
 
-                const nameMargin = parseFloat(window.getComputedStyle(nameRef.current).marginTop); // Get the margin of the header title
-                const nameHeight = nameRef.current.offsetHeight + nameMargin; // Get the height of the header title
-
                 const navBarHeight = navBarRef.current?.offsetHeight; // Get the height of the navbar
+                const nameObj = nameRef.current.getBoundingClientRect(); // Get the position of the header title
 
                 if (navBarHeight == null) return;
 
-                if (window.scrollY < nameHeight - navBarHeight) { // If the user is at the top of the page, hide the header title
+                if (navBarHeight <= nameObj.bottom) { // If the user is at the top of the page, hide the header title
                     setHidden(true);
                 } else { // If the user is not at the top of the page, show the header title
                     setHidden(false);
