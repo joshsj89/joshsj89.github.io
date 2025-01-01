@@ -24,8 +24,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 15px;
-    border: 0.1px solid rgb(133, 76, 230);
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--border-color);
+    box-shadow: rgba(23, 92, 230, 0.25) 0px 4px 24px;
     border-radius: 16px;
     padding: 1em;
     min-width: 175px;
