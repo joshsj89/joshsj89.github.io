@@ -92,16 +92,6 @@
         
     }
 
-    .skill-images img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .skill-images.wide-logo img {
-        width: 300px;
-        height: 150px;
-    }
-
     .skill-name {
         font-size: 30px;
     }
@@ -116,16 +106,6 @@
     .skills-col {
         flex: 0 0 80%;
         max-width: 80%;
-    }
-
-    .skill-images img {
-        width: 125px;
-        height: 125px;
-    }
-
-    .skill-images.wide-logo img {
-        width: 250px;
-        height: 125px;
     }
 
     .skill-name {
