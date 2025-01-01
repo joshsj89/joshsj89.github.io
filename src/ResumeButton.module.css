@@ -1,7 +1,7 @@
 .resume-button {
     position: relative; /* Ensure the button can position its children */
     background-color: transparent;
-    border: 3px solid black;
+    border: 3px solid var(--border-color);
     border-radius: 10px;
     padding: 10px;
     margin-top: 20px;
@@ -23,6 +23,6 @@
     left: 0;
     height: 100%;
     width: 0%;
-    background-color: blue;
+    background-color: var(--senary-color);
     transition: width 0.3s ease;
 }

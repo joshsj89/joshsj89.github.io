@@ -3,7 +3,7 @@
     padding: 10px 15px;
     cursor: pointer;
     border: none;
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    background: linear-gradient(135deg, var(--quaternary-color), var(--senary-color)); /* Gradient background */
     color: #ffffff;
     text-wrap: nowrap;
     border-radius: 25px; /* Rounded button for modern look */
@@ -15,7 +15,7 @@
 
 .category-btn:hover:not(.selected) {
     transform: scale(1.05); /* Slight zoom effect on hover */
-    background: linear-gradient(135deg, #2575fc, #6a11cb); /* Reverse gradient */
+    background: linear-gradient(135deg, var(--senary-color), var(--quaternary-color)); /* Reverse gradient */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
 }
 
@@ -25,7 +25,7 @@
 }
 
 .selected {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Highlight selected buttons */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Highlight selected buttons */
     color: #ffffff;
     box-shadow: 0 6px 12px rgba(255, 126, 95, 0.3); /* Stronger glow for selected buttons */
 }

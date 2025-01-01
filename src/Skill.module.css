@@ -1,6 +1,7 @@
 .skill-card {
     text-align: center;
     padding: 10px;
+    background-color: var(--secondary-color);
     border: 1px solid #ddd;
     border-radius: 5px;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -9,8 +10,9 @@
 }
 
 .skill-card:hover {
+    background-color: var(--quaternary-color);
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(23, 92, 230, 0.35);
 }
 
 .skill-card h4 {

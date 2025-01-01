@@ -1,3 +1,17 @@
+:root {
+    --primary-color: ivory;
+    --secondary-color: #e3e9ef;
+    --tertiary-color: #f9f9f9;
+    --quaternary-color: #87a6c5;
+    --quinary-color: #50759b;
+    --senary-color: #274c70;
+    --septary-color: #011a33;
+    --text-color: black;
+    --border-color: #274c70;
+    --header-color: #0d2946;
+    --white: #fff;
+}
+
 .page {
     transition: opacity 0.3s ease;
     display: flex;
