@@ -29,6 +29,8 @@ function InstagramEmbedder({ account, height }: InstagramEmbedderInterface) {
                 margin: '1px',
                 padding: '0',
                 height: `${height}px`,
+                minWidth: '250px', // Instagram overrides this with 326px
+                width: 'calc(100% - 2px)',
             }}
         >
             <div style={{ padding:'16px' }}> 

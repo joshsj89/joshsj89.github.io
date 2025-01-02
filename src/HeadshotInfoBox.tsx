@@ -29,7 +29,9 @@ function HeadshotInfoBox({ comp, num, side, text, title }: { comp?: JSX.Element,
                 <p className={styles['info-text']}>
                     {text}
                 </p>
-                {comp}
+                <div className={styles['info-box-component']}>
+                    {comp}
+                </div>
             </div>
             {side === "right" && <Headshot num={num} />}
         </div>

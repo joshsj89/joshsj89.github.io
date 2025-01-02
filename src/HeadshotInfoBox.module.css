@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
     padding: 1rem;
     margin-bottom: 1rem;
 }
@@ -40,19 +40,25 @@
     }
 
     .info-box {
-        padding: 0 0 5 0;
         margin-bottom: 0px;
     }
 
     .info-box-header {
-        font-size: 1.5em;
+        font-size: 1.0em;
         font-weight: 700;
         margin-bottom: 0px;
     }
 
     .info-text {
-        font-size: 1.5rem;
+        font-size: 1.0rem;
         font-weight: 500;
         margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 400px) {
+    .info-box-component { /* Ensures Instagram embed is not too wide */
+        width: 250px;
+        overflow: hidden;
     }
 }
