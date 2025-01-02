@@ -23,6 +23,11 @@
     transition: 0.3s;
 }
 
+.header-title:hover {
+    transform: rotate(-3deg) scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
 .header-title.hidden {
     opacity: 0;
 }
