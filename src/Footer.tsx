@@ -7,7 +7,7 @@ const year = new Date().getFullYear();
 function Footer({ dispatch, state }: { dispatch: React.Dispatch<any>, state: ScreenState }) {
     return (
         <footer>
-            <p>© {year} Josh Kindarara</p>
+            <p>&copy; {year} Josh Kindarara</p>
             <nav className={styles['social-media']}>
                 <ul>
                     <li>
