@@ -43,6 +43,7 @@
   "devDependencies": {
     "css-loader": "^6.8.1",
     "gh-pages": "^5.0.0",
+    "typescript": "^5.8.3",
     "typescript-plugin-css-modules": "^5.0.2"
   },
   "types": "./typings.d.ts"
