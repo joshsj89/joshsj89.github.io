@@ -7,7 +7,7 @@ function ResumeButton({ downloadID }: { downloadID: string }) {
 
     const handleClick = async () => {
         try {
-            const response = await fetch(`https://joshsj89-1d7a9e7057c7.herokuapp.com/api/pdf/download/${downloadID}`);
+            const response = await fetch(`https://my-api-r817.onrender.com/pdf/download/${downloadID}`);
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }

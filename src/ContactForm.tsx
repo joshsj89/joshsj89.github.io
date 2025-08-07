@@ -49,7 +49,7 @@ function ContactForm() {
                 id="contact-form" 
                 name="simple-contact-form" 
                 acceptCharset='UTF-8'
-                action="https://joshsj89-1d7a9e7057c7.herokuapp.com/api/contact" 
+                action="https://my-api-r817.onrender.com/contact" 
                 method="POST" >
                 <fieldset id={styles['contact-form-inputs']} >
                     <div className={styles['form-group']}>
