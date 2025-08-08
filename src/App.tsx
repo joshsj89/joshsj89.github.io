@@ -17,7 +17,7 @@ let skills: SkillInterface[];
 
 const fetchProjects = async () => {
     try {
-        const response = await fetch('https://my-api-r817.onrender.com/projects/all');
+        const response = await fetch('https://joshsapi.com/projects/all');
         projects = await response.json();
     } catch (error) {
         console.error('Error:', error);
@@ -26,7 +26,7 @@ const fetchProjects = async () => {
 
 const fetchSkills = async () => {
     try {
-        const response = await fetch('https://my-api-r817.onrender.com/skills/all');
+        const response = await fetch('https://joshsapi.com/skills/all');
         skills = await response.json();
     } catch (err) {
         console.error('Error:', err);

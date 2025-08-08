@@ -49,7 +49,7 @@ function ContactForm() {
                 id="contact-form" 
                 name="simple-contact-form" 
                 acceptCharset='UTF-8'
-                action="https://my-api-r817.onrender.com/contact" 
+                action="https://joshsapi.com/contact" 
                 method="POST" >
                 <fieldset id={styles['contact-form-inputs']} >
                     <div className={styles['form-group']}>
