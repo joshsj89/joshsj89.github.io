@@ -5,6 +5,8 @@
     box-shadow: rgba(23, 92, 230, 0.25) 0px 4px 24px;
     padding: 20px;
     margin: 0px 0px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding and border are included in width calculation */
     justify-content: center;
     align-items: center;
     border-radius: 50px;
