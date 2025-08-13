@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import HeadshotInfoBox from './HeadshotInfoBox';
 import { infoTexts } from './Constants/aboutMe';
 import InstagramEmbedder from './InstagramEmbedder';
@@ -22,7 +23,12 @@ function HomePage() {
                     title={infoTexts['Programming'].title} 
                 />
                 <HeadshotInfoBox 
-                    comp={<SpotifyEmbedder size="Compact" sizePercentage={100} type="playlist" uri="1GSNGAu8phHtkUNyHgGyf8" />}
+                    comp={
+                        <Fragment>
+                            <SpotifyEmbedder size="Compact" sizePercentage={100} type="playlist" uri="1GSNGAu8phHtkUNyHgGyf8" />
+                            <InstagramEmbedder account="kinders.music" height={215} />
+                        </Fragment>
+                    }
                     num="2" 
                     side="right" 
                     text={infoTexts['Jazz'].text} 
