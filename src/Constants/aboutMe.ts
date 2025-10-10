@@ -8,7 +8,7 @@ interface InfoText {
 export const infoTexts: InfoText = {
     "Programming": {
         "title": ["Software Engineer", "Full-Stack Developer"],
-        "text": "Hey, I'm Josh! I am an aspiring software engineer and full-stack developer who loves solving problems and learning new languages, frameworks, and technologies. I am currently a senior at Santa Clara University pursuing a Bachelor of Science in Computer Science and Engineering and a minor in Mathematics."
+        "text": "Hey, I'm Josh! I am an aspiring software engineer and full-stack developer who loves solving problems and learning new languages, frameworks, and technologies. I am currently a graduate student at Santa Clara University pursuing an M.S. in Computer Science and Engineering with an emphasis in Software Systems and Security. Previously, I graduated from Santa Clara University with a B.S. in Computer Science and Engineering and a minor in Mathematics."
     },
     "Photography": {
         "title": "Photography",
