@@ -33,6 +33,7 @@ The backend services for this portfolio are hosted on a separate site, which you
 ### Backend
 
 - **JavaScript**
+- **TypeScript**
 - **HTML/CSS**
 - **Node.js**
 - **Express.js**
