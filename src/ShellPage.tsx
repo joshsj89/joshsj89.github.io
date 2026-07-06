@@ -1,5 +1,3 @@
-import { Fragment } from 'react';
-
 import styles from './ShellPage.module.css';
 import Terminal from './Terminal';
 
