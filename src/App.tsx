@@ -8,6 +8,7 @@ import ProjectInterface from './Interfaces/ProjectInterface';
 import ProjectsPage from './ProjectsPage';
 import SkillInterface from './Interfaces/SkillInterface';
 import SkillsPage from './SkillsPage';
+import ShellPage from './ShellPage';
 import { NameProvider } from './Contexts/NameContext';
 import { Routes, Route } from 'react-router-dom';
 
@@ -43,6 +44,8 @@ function App() {
                     <Route path="/skills" element={<SkillsPage skills={skills} />} />
                     <Route path="/projects" element={<ProjectsPage projects={projects} />} />
                     <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/shell" element={<ShellPage />} />
+                    <Route path="*" element={<HomePage />} />
                 </Routes>
                 <Footer />
             </NameProvider>

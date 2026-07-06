@@ -1,0 +1,105 @@
+.shell-page {
+    display: flex;
+    flex-direction: row;
+    /* 70px accounts for the fixed navbar height to fit screen perfectly */
+    height: calc(100vh - 140px); 
+    margin-top: 70px; /* Aligns page content directly below navbar */
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: ui-monospace, Consolas, monospace;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Left Pane occupies roughly 50% and passes full sizing to xterm.js */
+.terminal-pane {
+    flex: 1;
+    height: 100%;
+    background-color: #000;
+    box-sizing: border-box;
+}
+
+/* Right Pane handles documentation with internal scrollbar if needed */
+.docs-pane {
+    flex: 1;
+    height: 100%;
+    padding: 40px;
+    background-color: #1a1a1a;
+    border-left: 1px solid #2e303a;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.docs-pane h3 {
+    margin: 16px 0 0 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.divider {
+    border: none;
+    border-top: 1px dashed #444;
+    margin: 4px 0;
+}
+
+.docs-pane p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+.command-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #b0b0b0;
+}
+
+.command-list code {
+    background-color: #2b2b2b;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+/* Mock config file container styling */
+.config-box {
+    margin-top: 20px;
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 16px;
+    font-size: 13px;
+    color: #a8ff60; /* Terminal neon green/amber alternative look */
+}
+
+.comment {
+    color: #7c7c7c;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.config-box pre {
+    margin: 0;
+    font-family: inherit;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+/* Media query to switch layout vertically on smaller screens */
+@media (max-width: 900px) {
+    .shell-page {
+        flex-direction: column;
+        overflow-y: auto;
+        height: auto;
+    }
+    .terminal-pane {
+        height: 400px; /* Give terminal fixed height when stacked */
+    }
+}
