@@ -1,29 +1,29 @@
-import { ACTIONS } from './App';
-import ScreenState from './Interfaces/ScreenState';
 import styles from './Footer.module.css';
+import { Link } from 'react-router-dom';
+import NavLinkButton from './NavLinkButton';
 
 const year = new Date().getFullYear();
 
-function Footer({ dispatch, state }: { dispatch: React.Dispatch<any>, state: ScreenState }) {
+function Footer() {
     return (
         <footer>
             <p>&copy; {year} Josh Kindarara</p>
             <nav className={styles['social-media']}>
                 <ul>
                     <li>
-                        <a href="https://www.linkedin.com/in/joshkindarara" target="_blank" rel="noreferrer">
+                        <Link to="https://www.linkedin.com/in/joshkindarara" target="_blank" rel="noopener noreferrer">
                             <img src="images/linkedin.png" alt="LinkedIn" />
-                        </a> 
+                        </Link> 
                     </li>
                     <li>
-                        <a href="https://www.github.com/joshsj89" target="_blank" rel="noreferrer">
+                        <Link to="https://www.github.com/joshsj89" target="_blank" rel="noopener noreferrer">
                             <img src="images/github-mark-white.png" alt="GitHub" />
-                        </a> 
+                        </Link> 
                     </li>
                     <li>
-                        <button onClick={() => dispatch({ type: ACTIONS.DISPLAY_CONTACT, payload: { state } })}>
+                        <NavLinkButton to="/contact">
                             <img src="images/email.png" alt="Email" />
-                        </button> 
+                        </NavLinkButton> 
                     </li>
                 </ul>
             </nav>
