@@ -19,11 +19,14 @@ function Terminal() {
 
         const resize = () => {
             fitAddon.fit();
-            socket.send(JSON.stringify({
-                type: "resize",
-                cols: term.cols,
-                rows: term.rows 
-            }));
+
+            if (socket.readyState === WebSocket.OPEN) {
+                socket.send(JSON.stringify({
+                    type: "resize",
+                    cols: term.cols,
+                    rows: term.rows 
+                }));
+            }
         };
 
         window.addEventListener("resize", resize);
@@ -51,14 +54,19 @@ function Terminal() {
         };
 
         term.onData((data) => {
-            socket.send(JSON.stringify({
-                type: "input",
-                data: data
-            }));
+            if (socket.readyState === WebSocket.OPEN) {
+                socket.send(JSON.stringify({
+                    type: "input",
+                    data: data
+                }));
+            }
         });
 
         return () => {
-            socket.close();
+            if (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING) {
+                socket.close();
+            }
+            
             term.dispose();
             window.removeEventListener("resize", resize);
         };
