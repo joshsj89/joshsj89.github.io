@@ -42,11 +42,18 @@
     text-align: left;
 }
 
+.link-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 .project-name {
     margin-top: 0;
     font-size: 1.5em;
     font-weight: bold;
     text-decoration: none;
+    color: #0000ee;
 }
 
 .project-name:visited {
