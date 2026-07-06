@@ -31,8 +31,6 @@ function Terminal() {
 
         window.addEventListener("resize", resize);
 
-        term.writeln("Josh Shell Demo");
-
         const socket = new WebSocket("wss://shell.joshsapi.com");
 
         socket.onopen = () => {
@@ -66,7 +64,7 @@ function Terminal() {
             if (socket.readyState === WebSocket.OPEN || socket.readyState === WebSocket.CONNECTING) {
                 socket.close();
             }
-            
+
             term.dispose();
             window.removeEventListener("resize", resize);
         };
