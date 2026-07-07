@@ -4,7 +4,7 @@ import NavLinkButton from './NavLinkButton';
 
 function Project({ project }: { project: ProjectInterface }) {
     const isInternal = project.link.startsWith(window.location.origin);
-    const newLink = isInternal ? '/' + project.link.replace(new RegExp(`^${window.location.origin}/#?`), '') : project.link;
+    const newLink = isInternal ? '/' + project.link.replace(new RegExp(`^${window.location.origin}/#/?`), '') : project.link;
 
     return (
         <div className={styles.project}>
