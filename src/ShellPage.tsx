@@ -17,13 +17,13 @@ function ShellPage() {
                     Welcome to <b>Josh</b>, a Bash-inspired Unix shell written entirely in C. 
                     It features a custom parser, command-line editor, history system, 
                     expansion engine, and execution pipeline. While it supports many 
-                    familiar shell features, every stage of processing—from reading 
-                    keystrokes to launching processes—has been implemented from scratch.
+                    familiar shell features, every stage of processing from reading 
+                    keystrokes to launching processes has been implemented from scratch.
                 </p>
                 <p>
                     Every command you type is processed by my own tokenizer, parser, expansion 
                     engine, and executor before the operating system runs it. The goal of this 
-                    project is to understand—and recreate—the core mechanics behind modern Unix 
+                    project is to understand and recreate the core mechanics behind modern Unix 
                     shells.
                 </p>
 
