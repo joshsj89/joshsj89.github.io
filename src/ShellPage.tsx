@@ -91,7 +91,7 @@ Type "help" for more information.`}</pre>
                             <li>Performs shell expansions, including:
                                 <ul>
                                     <li>Tilde expansion (<code>~/</code>)</li>
-                                    <li>Variable expansion (<code>$var</code>)</li>
+                                    <li>Variable expansion (<code>$var</code>,<code>{'${var}'}</code>)</li>
                                     <li>Command substitution (<code>$(command)</code>)</li>
                                     <li>Arithmetic expansion (<code>$((expression))</code>)</li>
                                     <li>Quote removal</li>
