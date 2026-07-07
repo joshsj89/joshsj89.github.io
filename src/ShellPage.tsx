@@ -83,17 +83,20 @@ Type "help" for more information.`}</pre>
                         </ul>
                     <li>Parsing</li>
                         <ul>
-                            <li>Builds an internal representation of the command and validates shell syntax.</li>
+                            <li>Builds an intermediate representation of the command and validates shell syntax.</li>
                         </ul>
                     <li>Expansion</li>
                         <ul>
-                            <li>Performs shell expansions, including:</li>
-                            <ul>
-                                <li>Variable expansion (<code>$var</code>)</li>
-                                <li>Command substitution (<code>$(command)</code>)</li>
-                                <li>Arithmetic expansion (<code>$((expression))</code>)</li>
-                                <li>Quote removal</li>
-                            </ul>
+                            <li>Uses the intermediate representation for expansion in order to prevent rescanning of the tokens.</li>
+                            <li>Performs shell expansions, including:
+                                <ul>
+                                    <li>Tilde expansion (<code>~/</code>)</li>
+                                    <li>Variable expansion (<code>$var</code>)</li>
+                                    <li>Command substitution (<code>$(command)</code>)</li>
+                                    <li>Arithmetic expansion (<code>$((expression))</code>)</li>
+                                    <li>Quote removal</li>
+                                </ul>
+                            </li>
                         </ul>
                     <li>Execution</li>
                         <ul>
