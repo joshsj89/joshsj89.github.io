@@ -11,7 +11,7 @@ function ShellPage() {
 
             {/* Right Pane: System Docs & Quick Start */}
             <div className={styles['docs-pane']}>
-                <h3>**SYSTEM DIAGNOSTICS & QUICK START**</h3>
+                <h3>SYSTEM DOCUMENTATION & QUICK START</h3>
                 <hr className={styles['divider']} />
                 <p>
                     Welcome to <b>Josh</b>, a Bash-inspired Unix shell written entirely in C. 
@@ -27,7 +27,7 @@ function ShellPage() {
                     shells.
                 </p>
 
-                <h3>**QUICK COMMANDS (TRY TYPING THESE):**</h3>
+                <h3>QUICK COMMANDS (TRY TYPING THESE):</h3>
                 <hr className={styles['divider']} />
                 <p>A list of common commands to begin your exploration:</p>
                 
@@ -67,7 +67,7 @@ Supported Features
 Type "help" for more information.`}</pre>
                 </div> */}
 
-                <h3>**HOW THE SHELL WORKS:**</h3>
+                <h3>HOW THE SHELL WORKS:</h3>
                 <hr className={styles['divider']} />
                 <p>This shell is implemented in C using POSIX system calls and standard Unix APIS, including:</p>
                 
@@ -103,7 +103,7 @@ Type "help" for more information.`}</pre>
                         </ul>
                 </ol>
 
-                <h3>**IMPLEMENTATION:**</h3>
+                <h3>IMPLEMENTATION:</h3>
                 <hr className={styles['divider']} />
                 <p>This shell is implemented in C using POSIX system calls and standard Unix APIS, including:</p>
                 
