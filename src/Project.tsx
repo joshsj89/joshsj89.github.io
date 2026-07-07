@@ -3,7 +3,7 @@ import styles from './Project.module.css';
 import NavLinkButton from './NavLinkButton';
 
 function Project({ project }: { project: ProjectInterface }) {
-    const isInternal = project.link.startsWith(window.location.origin);
+    const isInternal = project.link.startsWith(`${window.location.origin}/#`);
     const newLink = isInternal ? '/' + project.link.replace(new RegExp(`^${window.location.origin}/#/?`), '') : project.link;
 
     return (
