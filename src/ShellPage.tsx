@@ -94,6 +94,7 @@ Type "help" for more information.`}</pre>
                                     <li>Variable expansion (<code>$var</code>,<code>{'${var}'}</code>)</li>
                                     <li>Command substitution (<code>$(command)</code>)</li>
                                     <li>Arithmetic expansion (<code>$((expression))</code>)</li>
+                                    <li>Word splitting</li>
                                     <li>Quote removal</li>
                                 </ul>
                             </li>
