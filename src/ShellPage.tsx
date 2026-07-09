@@ -27,7 +27,7 @@ function ShellPage() {
                     shells.
                 </p>
 
-                <h3>QUICK COMMANDS (TRY TYPING THESE):</h3>
+                <h3>QUICK COMMANDS (TRY TYPING THESE)</h3>
                 <hr className={styles['divider']} />
                 <p>A list of common commands to begin your exploration:</p>
                 
@@ -67,7 +67,7 @@ Supported Features
 Type "help" for more information.`}</pre>
                 </div> */}
 
-                <h3>HOW THE SHELL WORKS:</h3>
+                <h3>HOW THE SHELL WORKS</h3>
                 <hr className={styles['divider']} />
                 <p>This shell is implemented in C using POSIX system calls and standard Unix APIS, including:</p>
                 
@@ -107,7 +107,7 @@ Type "help" for more information.`}</pre>
                         </ul>
                 </ol>
 
-                <h3>IMPLEMENTATION:</h3>
+                <h3>IMPLEMENTATION</h3>
                 <hr className={styles['divider']} />
                 <p>This shell is implemented in C using POSIX system calls and standard Unix APIS, including:</p>
                 
@@ -120,6 +120,17 @@ Type "help" for more information.`}</pre>
                     <li><code>termios</code> (for raw terminal input)</li>
                     <li><code>pipe()</code></li>
                     <li><code>dup2()</code></li>
+                </ul>
+
+                <h3>WHAT'S NEXT?</h3>
+                <hr className={styles['divider']} />
+                <p>Future improvements for this shell may include:</p>
+                <ul className={styles['command-list']}>
+                    <li>Implementing support for input/output redirection, piping, and background jobs (&).</li>
+                    <li>Creating a custom parser for arithmetic expressions rather than relying on Bash's built-in parser.</li>
+                    <li>Implementing support for Bash string manipulation (e.g., <code>{'${VAR#pattern}'}</code>, <code>{'${VAR%pattern}'}</code>, etc.)</li>
+                    <li>Adding support for more built-in commands (e.g., "help", "jobs", "fg", "bg", "alias", "unalias", etc.).</li>
+                    <li>Implementing history expansion functionality (e.g., !n, !!, !string) to allow users to recall and execute previous commands.</li>
                 </ul>
             </div>
         </div>
