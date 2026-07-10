@@ -127,6 +127,7 @@ Type "help" for more information.`}</pre>
                 <p>Future improvements for this shell may include:</p>
                 <ul className={styles['command-list']}>
                     <li>Implementing support for input/output redirection, piping, and background jobs (&).</li>
+                    <li>Implementing pathname expansion / globbing (e.g., <code>*</code>, <code>?</code>, <code>[...]</code>)</li>
                     <li>Creating a custom parser for arithmetic expressions rather than relying on Bash's built-in parser.</li>
                     <li>Implementing support for Bash string manipulation (e.g., <code>{'${VAR#pattern}'}</code>, <code>{'${VAR%pattern}'}</code>, etc.)</li>
                     <li>Adding support for more built-in commands (e.g., "help", "jobs", "fg", "bg", "alias", "unalias", etc.).</li>
