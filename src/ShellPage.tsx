@@ -126,7 +126,7 @@ Type "help" for more information.`}</pre>
                 <hr className={styles['divider']} />
                 <p>Future improvements for this shell may include:</p>
                 <ul className={styles['command-list']}>
-                    <li>Implementing support for chaining pipelines and background jobs (&).</li>
+                    <li>Implementing support for background jobs (&).</li>
                     <li>Implementing pathname expansion / globbing (e.g., <code>*</code>, <code>?</code>, <code>[...]</code>)</li>
                     <li>Creating a custom parser for arithmetic expressions rather than relying on Bash's built-in parser.</li>
                     <li>Implementing support for Bash string manipulation (e.g., <code>{'${VAR#pattern}'}</code>, <code>{'${VAR%pattern}'}</code>, etc.)</li>
