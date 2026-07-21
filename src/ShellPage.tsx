@@ -103,7 +103,8 @@ Type "help" for more information.`}</pre>
                         <ul>
                             <li>Built-in commands execute directly within the shell.</li>
                             <li>External programs are launched using <code>fork()</code> and <code>execvp()</code>.</li>
-                            <li>The parent shell waits for the child process to finish before displaying the next prompt.</li>
+                            <li>Background jobs are supported using the <code>&</code> operator.</li>
+                            <li>The parent shell waits for the child process to finish before displaying the next prompt if the job is not in the background.</li>
                         </ul>
                 </ol>
 
@@ -126,7 +127,7 @@ Type "help" for more information.`}</pre>
                 <hr className={styles['divider']} />
                 <p>Future improvements for this shell may include:</p>
                 <ul className={styles['command-list']}>
-                    <li>Implementing support for background jobs (&).</li>
+                    <li>Implementing support for background jobs (non-trailing &).</li>
                     <li>Implementing pathname expansion / globbing (e.g., <code>*</code>, <code>?</code>, <code>[...]</code>)</li>
                     <li>Creating a custom parser for command substitution and arithmetic expressions rather than relying on Bash through popen().</li>
                     <li>Implementing support for Bash string manipulation (e.g., <code>{'${VAR#pattern}'}</code>, <code>{'${VAR%pattern}'}</code>, etc.)</li>
