@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Page not found | Josh Kindarara</title>
+        <script>
+            // Redirect clean portfolio URLs (e.g. /projects) to their HashRouter equivalents (/#/projects)
+            // Make sure this list is kept with src/App.tsx
+            const routes = ['/skills', '/projects', '/contact', '/shell'];
+            const l = window.location;
+            const path = l.pathname.replace(/\/+$/, '').toLowerCase();
+            if (routes.indexOf(path) !== -1) {
+                l.replace('/#' + path + l.search + l.hash.replace(/^#/, ''));
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Page not found</h1>
+        <p><a href="/">Go to joshsj89.github.io</a></p>
+    </body>
+</html>
